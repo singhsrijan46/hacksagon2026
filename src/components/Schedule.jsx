@@ -77,7 +77,7 @@ const Schedule = () => {
             baseRotation={5}
             blurStrength={10}
             containerClassName="mt-5 text-center pointer-events-none mix-blend-difference relative z-10"
-            textClassName="font-zentry text-white font-black text-7xl md:text-[6rem] uppercase leading-[0.85]"
+            textClassName="font-zentry text-white font-black text-7xl md:text-[6rem] uppercase leading-[0.87]"
             rotationEnd="center center"
             wordAnimationEnd="center center"
           >
@@ -93,8 +93,8 @@ const Schedule = () => {
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseLeave}
                   onMouseEnter={handleMouseLeave}
-                  src="/img/entrance.webp"
-                  alt="entrance.webp"
+                  src="/img/schedule.png"
+                  alt="schedule.png"
                   className="object-contain"
                 />
               </div>

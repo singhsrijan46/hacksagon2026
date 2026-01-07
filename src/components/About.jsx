@@ -63,7 +63,7 @@ const About = () => {
           baseRotation={5}
           blurStrength={10}
           containerClassName="mt-5 text-center"
-          textClassName="text-white font-zentry font-black text-7xl md:text-[6rem] uppercase leading-[0.85] sm:px-32"
+          textClassName="text-white font-zentry font-black text-7xl md:text-[6rem] uppercase leading-[0.87] sm:px-32"
           rotationEnd="center center"
           wordAnimationEnd="center center"
         >
