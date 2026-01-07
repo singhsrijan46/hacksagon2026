@@ -26,7 +26,7 @@ const CurrentSponsors = () => {
                 <h3 className="text-center font-zentry text-4xl md:text-7xl mb-10 uppercase text-white">
                     Current Sponsors
                 </h3>
-                <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-8">
                     {sponsors.map((sponsor, index) => (
                         <div key={index} className="flex flex-col items-center gap-4">
                             <TiltedCard
@@ -35,7 +35,7 @@ const CurrentSponsors = () => {
                                 captionText={sponsor.alt}
                                 containerHeight={null}
                                 containerWidth={null}
-                                containerClass="w-[140px] h-[100px] sm:w-[160px] sm:h-[120px] md:w-[300px] md:h-[200px]"
+                                containerClass="w-[200px] h-[150px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px]"
                                 imageHeight="100%"
                                 imageWidth="100%"
                                 rotateAmplitude={12}
