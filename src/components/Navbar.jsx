@@ -3,6 +3,7 @@ import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow, TiCalendar } from "react-icons/ti";
 import { useNavigate, useLocation } from "react-router-dom";
+import { createPortal } from "react-dom";
 
 import Button from "./Button";
 
@@ -14,6 +15,7 @@ const NavBar = () => {
   const { y: currentScrollY } = useWindowScroll();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -40,8 +42,14 @@ const NavBar = () => {
     });
   }, [isNavVisible]);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  }
+
   const handleNavClick = (e, item) => {
     e.preventDefault();
+    setIsMobileMenuOpen(false); // Close mobile menu on click
+
     if (item === "Schedule") {
       navigate('/schedule');
       return;
@@ -70,6 +78,20 @@ const NavBar = () => {
       navigate('/brochure');
       return;
     }
+    if (item === "Contact") {
+      if (location.pathname !== '/') {
+        navigate('/#contact');
+        setTimeout(() => {
+          const element = document.getElementById('contact');
+          if (element) element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const element = document.getElementById('contact');
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }
+      return;
+    }
+
 
     if (location.pathname !== '/') {
       navigate(`/#${item.toLowerCase()}`);
@@ -86,30 +108,60 @@ const NavBar = () => {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-4 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex size-full items-center justify-between p-4">
-          <div className="flex items-center gap-7">
+        <nav className="flex size-full items-center justify-between p-4 md:p-4">
+          <div className="flex items-center gap-4 md:gap-7">
             <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
               <img
                 src="https://i.postimg.cc/cCT9dGfv/Hacksagon-white.png"
                 alt="logo"
-                className="h-10 w-auto"
+                className="h-8 w-auto md:h-10"
               />
-              <span className="font-general font-black text-2xl uppercase text-blue-50">Hacksagon</span>
+              <span className="font-general font-black text-lg md:text-2xl uppercase text-blue-50">Hacksagon</span>
             </div>
 
-            <Button
-              id="register-button"
-              title="Register"
-              rightIcon={<TiLocationArrow />}
-              containerClass="bg-blue-50 flex items-center justify-center gap-1"
-              onClick={() => navigate('/schedule')}
-            />
+            <div className="hidden md:flex">
+              <Button
+                id="register-button"
+                title="Register"
+                rightIcon={<TiLocationArrow />}
+                containerClass="bg-blue-50 flex items-center justify-center gap-1"
+                onClick={() => navigate('/schedule')}
+              />
+            </div>
+
           </div>
 
-          <div className="flex h-full items-center">
+          <div className="flex h-full items-center gap-4">
+            {/* Mobile Register Button */}
+            <div className="md:hidden">
+              <Button
+                id="register-button-mobile-nav"
+                title="Register"
+                rightIcon={<TiLocationArrow />}
+                containerClass="bg-blue-50 flex items-center justify-center gap-1 !py-2 !px-3 text-xs"
+                onClick={() => navigate('/schedule')}
+              />
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-blue-50 focus:outline-none"
+              onClick={toggleMobileMenu}
+            >
+              {isMobileMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              )}
+            </button>
+
             <div className="hidden md:block">
               {navItems.map((item, index) => (
                 <a
@@ -144,6 +196,31 @@ const NavBar = () => {
             </div>
           </div>
         </nav>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && createPortal(
+          <div className="fixed inset-0 z-[60] h-screen bg-[#1a0b2e] md:hidden overflow-y-auto flex flex-col items-center justify-center gap-6">
+            <button
+              className="absolute top-8 right-8 text-blue-50 focus:outline-none"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {[...navItems, ...moreItems].map((item, index) => (
+              <a
+                key={index}
+                href={`#${item.toLowerCase()}`}
+                className="text-2xl font-general text-blue-50 hover:text-yellow-300 transition-colors uppercase"
+                onClick={(e) => handleNavClick(e, item)}
+              >
+                {item}
+              </a>
+            ))}
+          </div>,
+          document.body
+        )}
       </header>
     </div>
   );

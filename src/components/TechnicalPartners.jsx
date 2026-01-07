@@ -22,7 +22,7 @@ const TechnicalPartners = () => {
                 <h3 className="text-center font-zentry text-4xl md:text-7xl mb-10 uppercase text-white">
                     Technical Partners
                 </h3>
-                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div className="flex flex-wrap justify-center items-center gap-4 md:gap-16">
                     {partners.map((partner, index) => (
                         <div key={index} className="flex flex-col items-center gap-4">
                             <TiltedCard
@@ -31,7 +31,7 @@ const TechnicalPartners = () => {
                                 captionText={partner.alt}
                                 containerHeight={null}
                                 containerWidth={null}
-                                containerClass="w-[140px] h-[100px] sm:w-[160px] sm:h-[120px] md:w-[300px] md:h-[200px]"
+                                containerClass="w-[160px] h-[120px] xs:w-[180px] sm:w-[300px] sm:h-[200px]"
                                 imageHeight="100%"
                                 imageWidth="100%"
                                 rotateAmplitude={12}
