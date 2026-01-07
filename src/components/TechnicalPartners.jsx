@@ -22,7 +22,7 @@ const TechnicalPartners = () => {
                 <h3 className="text-center font-zentry text-4xl md:text-7xl mb-10 uppercase text-white">
                     Technical Partners
                 </h3>
-                <div className="flex flex-wrap justify-center items-center gap-4 md:gap-16">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
                     {partners.map((partner, index) => (
                         <div key={index} className="flex flex-col items-center gap-4">
                             <TiltedCard
@@ -31,16 +31,16 @@ const TechnicalPartners = () => {
                                 captionText={partner.alt}
                                 containerHeight={null}
                                 containerWidth={null}
-                                containerClass="w-[160px] h-[120px] xs:w-[180px] sm:w-[300px] sm:h-[200px]"
+                                containerClass="w-[200px] h-[150px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px]"
                                 imageHeight="100%"
                                 imageWidth="100%"
                                 rotateAmplitude={12}
                                 scaleOnHover={1.1}
                                 showMobileWarning={false}
-                                showTooltip={true}
+                                showTooltip={false}
                                 displayOverlayContent={true}
                                 overlayContent={
-                                    <div className="flex items-end justify-center w-full h-full pb-6 px-2">
+                                    <div className="flex items-end justify-center w-full h-full pb-4 px-2">
                                         <p className="text-black text-[10px] md:text-xs font-bold text-center leading-tight">
                                             {partner.alt}
                                         </p>

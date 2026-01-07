@@ -76,8 +76,8 @@ const Schedule = () => {
             enableBlur={true}
             baseRotation={5}
             blurStrength={10}
-            containerClassName="mt-5 text-center pointer-events-none mix-blend-difference relative z-10"
-            textClassName="font-zentry text-white font-black text-7xl md:text-[6rem] uppercase leading-[0.87]"
+            containerClassName="mt-5 text-center pointer-events-none mix-blend-difference relative z-10 px-4 sm:px-8 md:px-32"
+            textClassName="font-zentry text-white font-black !text-5xl !leading-none sm:!text-6xl md:!text-[6rem] uppercase md:!leading-[0.87]"
             rotationEnd="center center"
             wordAnimationEnd="center center"
           >

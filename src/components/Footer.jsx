@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Links Columns Container */}
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24 md:mr-32">
+          <div className="flex flex-row md:flex-row gap-8 md:gap-24 md:mr-32">
 
             {/* Middle Column: About */}
             <div className="flex flex-col gap-4">
@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
 
             {/* Right Column: Support */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 ml-8 md:ml-0">
               <h3 className="font-zentry text-lg uppercase tracking-wider text-white">Support</h3>
               <ul className="flex flex-col gap-3 font-circular-web text-sm text-blue-50/60">
                 <li><a href="#brochure" className="hover:text-yellow-300 transition-colors duration-300">Brochure</a></li>
