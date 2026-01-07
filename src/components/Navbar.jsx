@@ -14,6 +14,7 @@ const NavBar = () => {
   const { y: currentScrollY } = useWindowScroll();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -142,8 +143,42 @@ const NavBar = () => {
                 </div>
               </div>
             </div>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              className="ml-4 md:hidden text-white focus:outline-none"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <span className="text-2xl">✕</span> // Close icon
+              ) : (
+                <span className="text-2xl">☰</span> // Hamburger icon
+              )}
+            </button>
           </div>
         </nav>
+
+        {/* Mobile Menu Overlay */}
+        <div
+          className={`fixed inset-0 z-40 bg-[#1a0b2e] pt-24 px-6 md:hidden transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
+        >
+          <div className="flex flex-col gap-6">
+            {[...navItems, ...moreItems].map((item, index) => (
+              <a
+                key={index}
+                href={`#${item.toLowerCase()}`}
+                className="text-2xl font-general font-medium text-white hover:text-blue-50 transition-colors"
+                onClick={(e) => {
+                  handleNavClick(e, item);
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        </div>
       </header>
     </div>
   );
