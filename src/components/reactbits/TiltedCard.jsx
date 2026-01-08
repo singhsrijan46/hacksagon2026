@@ -22,7 +22,8 @@ export default function TiltedCard({
     overlayContent = null,
     displayOverlayContent = false,
     containerClass = "",
-    imageClass = "bg-white"
+    imageClass = "bg-white",
+    useAutoHeight = false
 }) {
     const ref = useRef(null);
     const x = useMotionValue(0);
@@ -76,9 +77,9 @@ export default function TiltedCard({
     return (
         <figure
             ref={ref}
-            className={`relative w-full h-full [perspective:800px] flex flex-col items-center justify-center ${containerClass}`}
+            className={`relative w-full ${useAutoHeight ? 'h-auto' : 'h-full'} [perspective:800px] flex flex-col items-center justify-center ${containerClass}`}
             style={{
-                height: containerHeight,
+                height: useAutoHeight ? 'auto' : containerHeight,
                 width: containerWidth
             }}
             onMouseMove={handleMouse}
@@ -95,7 +96,7 @@ export default function TiltedCard({
                 className="relative [transform-style:preserve-3d]"
                 style={{
                     width: imageWidth,
-                    height: imageHeight,
+                    height: useAutoHeight ? 'auto' : imageHeight,
                     rotateX,
                     rotateY,
                     scale
@@ -112,7 +113,7 @@ export default function TiltedCard({
                 />
 
                 {displayOverlayContent && overlayContent && (
-                    <motion.div className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)] w-full h-full">
+                    <motion.div className={`${useAutoHeight ? 'relative' : 'absolute'} top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)] w-full h-full`}>
                         {overlayContent}
                     </motion.div>
                 )}
