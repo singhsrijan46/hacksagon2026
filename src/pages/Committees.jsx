@@ -9,7 +9,7 @@ const committeesResult = [
             {
                 name: "Dr. M.V. Kartikeyan",
                 role: "Director, IIITDM Kanchipuram, India",
-                image: "https://www.iiitdm.ac.in/img/faculty/Director.jpg"
+                image: "https://i.postimg.cc/mtFmWm5t/iiitdm-director.webp"
             }
         ]
     },
@@ -19,12 +19,12 @@ const committeesResult = [
             {
                 name: "Dr. Somesh Kumar",
                 role: "Assistant professor, IEEE Student Branch Counselor, ABV-IIITM Gwalior, India",
-                image: "https://www.iiitm.ac.in/images/somesh%20kumar.jpg"
+                image: "https://i.postimg.cc/TLC4hhV1/somesh-Sir.jpg"
             },
             {
                 name: "Dr. Pinku Ranjan",
                 role: "Assistant professor, ABV-IIITM Gwalior, India",
-                image: "https://www.iiitm.ac.in/images/Pinku_Ranjan.jpg"
+                image: "https://i.postimg.cc/mzbnb7FK/pinku-sir.jpg"
             }
         ]
     }
@@ -32,11 +32,11 @@ const committeesResult = [
 
 const Committees = () => {
     return (
-        <section className="min-h-screen bg-black text-white pt-32 pb-20 overflow-x-hidden">
+        <section className="min-h-screen bg-[#060010] text-white pt-28 md:pt-32 pb-20 overflow-x-hidden">
             <div className="container mx-auto px-8 md:px-24">
                 <TitleHeader title="Committees" sub="" />
 
-                <div className="flex flex-col gap-24 mt-16">
+                <div className="flex flex-col gap-24 mt-12 md:mt-20">
                     {committeesResult.map((group, index) => (
                         <div key={index} className="w-full">
                             <h3 className="text-3xl md:text-5xl font-bold text-yellow-300 mb-12 font-robert-medium text-left">

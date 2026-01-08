@@ -5,7 +5,7 @@ import { TiLocationArrow, TiCalendar } from "react-icons/ti";
 import { useNavigate, useLocation } from "react-router-dom";
 import { createPortal } from "react-dom";
 
-import Button from "./Button";
+
 
 const navItems = ["About", "Themes", "Rewards", "Schedule", "Sponsors", "Partners"];
 const moreItems = ["Brochure", "Committees", "Contact"];
@@ -123,13 +123,15 @@ const NavBar = () => {
             </div>
 
             <div className="hidden md:flex">
-              <Button
+              <button
                 id="register-button"
-                title="Register"
-                rightIcon={<TiLocationArrow />}
-                containerClass="bg-blue-50 flex items-center justify-center gap-1"
+                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white flex items-center justify-center gap-1 px-7 py-3"
                 onClick={() => navigate('/schedule')}
-              />
+              >
+                <span className="flex items-center gap-2 font-general uppercase text-xs">
+                  Register <TiLocationArrow className="group-hover:rotate-45 transition-transform" />
+                </span>
+              </button>
             </div>
 
           </div>
@@ -137,13 +139,15 @@ const NavBar = () => {
           <div className="flex h-full items-center gap-4">
             {/* Mobile Register Button */}
             <div className="md:hidden">
-              <Button
+              <button
                 id="register-button-mobile-nav"
-                title="Register"
-                rightIcon={<TiLocationArrow />}
-                containerClass="bg-blue-50 flex items-center justify-center gap-1 !py-2 !px-3 text-xs"
+                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white flex items-center justify-center gap-1 !py-2 !px-3 text-xs"
                 onClick={() => navigate('/schedule')}
-              />
+              >
+                <span className="flex items-center gap-2 font-general uppercase">
+                  Register <TiLocationArrow className="group-hover:rotate-45 transition-transform" />
+                </span>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}

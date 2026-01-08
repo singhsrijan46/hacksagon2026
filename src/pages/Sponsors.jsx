@@ -45,7 +45,7 @@ const pastSponsors = [
 
 const Sponsors = () => {
     return (
-        <div className="bg-black min-h-screen pt-20">
+        <div className="bg-[#060010] min-h-screen pt-20">
             {/* Pricing Section */}
             <section className={`${styles.padding} max-w-7xl mx-auto`}>
                 <h3 className={`${styles.sectionHeadText} text-center mb-16 font-zentry uppercase`}>
@@ -64,7 +64,7 @@ const Sponsors = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <button className="bg-white text-black font-bold py-2 px-6 rounded-full hover:bg-gray-200 transition">
+                                <button className="bg-blue-50 text-black font-bold py-2 px-6 rounded-full transition-all hover:bg-[#5542ff] hover:text-white">
                                     Contact Us
                                 </button>
                             </div>

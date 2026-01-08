@@ -1,15 +1,17 @@
 import gsap from "gsap";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
-import Button from "./Button";
+
 import ScrollReveal from "./reactbits/ScrollReveal";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Schedule = () => {
   const frameRef = useRef(null);
+  const navigate = useNavigate();
 
   useGSAP(() => {
     gsap.to(".story-subtitle", {
@@ -135,11 +137,13 @@ const Schedule = () => {
               Explore the full schedule and stay on track throughout the hackathon journey.
             </p>
 
-            <Button
+            <button
               id="realm-btn"
-              title="view schedule"
-              containerClass="mt-5"
-            />
+              className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white px-7 py-3 mt-5 font-general text-xs uppercase"
+              onClick={() => navigate('/schedule')}
+            >
+              view schedule
+            </button>
           </div>
         </div>
       </div>
