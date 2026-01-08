@@ -1,4 +1,4 @@
-import TiltedCard from "./reactbits/TiltedCard";
+import TitleHeader from "./TitleHeader";
 
 const partners = [
     {
@@ -11,7 +11,7 @@ const partners = [
     },
     {
         src: "https://lh3.googleusercontent.com/d/1YUMnL6PVQH5gI-bC72-AprkaUP01ejev",
-        alt: "ABV-IIITM IEEE Student Branch",
+        alt: "ABV-IIITM IEEE SB",
     },
 ];
 
@@ -19,34 +19,17 @@ const TechnicalPartners = () => {
     return (
         <section className="py-20">
             <div className="container mx-auto px-4">
-                <h3 className="text-center font-zentry text-4xl md:text-7xl mb-10 uppercase text-white">
-                    Technical Partners
-                </h3>
-                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <TitleHeader title="Technical Partners" sub="" />
+                <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                     {partners.map((partner, index) => (
                         <div key={index} className="flex flex-col items-center gap-4">
-                            <TiltedCard
-                                imageSrc={partner.src}
-                                altText={partner.alt}
-                                captionText={partner.alt}
-                                containerHeight={null}
-                                containerWidth={null}
-                                containerClass="w-[140px] h-[100px] sm:w-[160px] sm:h-[120px] md:w-[300px] md:h-[200px]"
-                                imageHeight="100%"
-                                imageWidth="100%"
-                                rotateAmplitude={12}
-                                scaleOnHover={1.1}
-                                showMobileWarning={false}
-                                showTooltip={true}
-                                displayOverlayContent={true}
-                                overlayContent={
-                                    <div className="flex items-end justify-center w-full h-full pb-6 px-2">
-                                        <p className="text-black text-[10px] md:text-xs font-bold text-center leading-tight">
-                                            {partner.alt}
-                                        </p>
-                                    </div>
-                                }
-                            />
+                            <div className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4">
+                                <img
+                                    src={partner.src}
+                                    alt={partner.alt}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>

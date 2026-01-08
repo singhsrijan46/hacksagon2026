@@ -4,7 +4,7 @@ import { TiLocationArrow } from "react-icons/ti";
 
 const Brochure = () => {
     return (
-        <section id="brochure" className="min-h-screen bg-black text-blue-50 relative overflow-hidden flex flex-col items-center justify-center py-20">
+        <section id="brochure" className="min-h-screen bg-[#060010] text-blue-50 relative overflow-hidden flex flex-col items-center justify-center pt-28 md:pt-32 pb-20">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(87,36,255,0.15),transparent_70%)]" />
@@ -16,9 +16,9 @@ const Brochure = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="font-zentry text-5xl md:text-8xl mb-8 uppercase"
+                    className="font-zentry text-5xl md:text-7xl mb-8 uppercase"
                 >
-                    Hacksagon <br /> Brochure
+                    Hacksagon Brochure
                 </motion.h1>
 
                 <motion.p
@@ -39,10 +39,10 @@ const Brochure = () => {
                     <a
                         href="/img/Sponshorship 2026 Hacksagon.svg"
                         download="Hacksagon_Brochure_2026.svg"
-                        className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 px-8 py-4 text-black transition-all hover:bg-[#5542ff] hover:text-white"
+                        className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 px-6 py-3 text-black transition-all hover:bg-[#5542ff] hover:text-white"
                     >
-                        <span className="flex items-center gap-2 font-general font-bold uppercase text-sm md:text-base">
-                            Download Brochure <TiLocationArrow className="text-xl group-hover:rotate-45 transition-transform" />
+                        <span className="flex items-center gap-2 font-general font-bold uppercase text-xs md:text-sm">
+                            Download Brochure <TiLocationArrow className="text-lg group-hover:rotate-45 transition-transform" />
                         </span>
                     </a>
 
@@ -50,9 +50,9 @@ const Brochure = () => {
                         href="/img/Sponshorship 2026 Hacksagon.svg"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative cursor-pointer overflow-hidden rounded-full border border-blue-50/30 px-8 py-4 text-blue-50 transition-all hover:bg-white/10"
+                        className="group relative cursor-pointer overflow-hidden rounded-full border border-blue-50/30 px-6 py-3 text-blue-50 transition-all hover:bg-white/10"
                     >
-                        <span className="flex items-center gap-2 font-general font-bold uppercase text-sm md:text-base">
+                        <span className="flex items-center gap-2 font-general font-bold uppercase text-xs md:text-sm">
                             View Online
                         </span>
                     </a>
