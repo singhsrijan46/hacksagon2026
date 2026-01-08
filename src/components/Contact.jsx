@@ -55,7 +55,7 @@ const socialLinks = [
 
 const Contact = () => {
     return (
-        <div id="contact" className="my-10 min-h-96 w-screen px-10">
+        <div id="contact" className="my-6 md:my-10 min-h-96 w-screen px-10">
             <div className="relative rounded-lg bg-black py-10 text-blue-50 sm:overflow-hidden border border-white/10">
 
                 <div className="flex flex-col lg:flex-row items-stretch justify-between px-6 md:px-10 gap-8">

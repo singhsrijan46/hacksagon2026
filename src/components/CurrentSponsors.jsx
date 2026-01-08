@@ -22,7 +22,7 @@ const sponsors = [
 
 const CurrentSponsors = () => {
     return (
-        <section className="py-20">
+        <section className="py-10 md:py-20">
             <div className="container mx-auto px-4">
                 <TitleHeader title="Current Sponsors" sub="" />
                 <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">

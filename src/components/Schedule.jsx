@@ -67,7 +67,7 @@ const Schedule = () => {
 
   return (
     <div id="story" className="min-h-dvh w-screen bg-[#060010] text-blue-50">
-      <div className="flex size-full flex-col items-center py-10 pb-24">
+      <div className="flex size-full flex-col items-center py-4 pb-12 md:py-10 md:pb-24">
         <p className="story-subtitle font-general text-sm uppercase md:text-[10px] opacity-0 translate-y-10 leading-[0.85]">
           HACKSAGON EVENT SCHEDULE
         </p>
@@ -79,7 +79,7 @@ const Schedule = () => {
             baseRotation={5}
             blurStrength={10}
             containerClassName="mt-5 text-center pointer-events-none mix-blend-difference relative z-10 px-4 sm:px-8 md:px-32"
-            textClassName="font-zentry text-white font-black !text-5xl !leading-none sm:!text-6xl md:!text-[6rem] uppercase md:!leading-[0.87]"
+            textClassName="font-zentry text-white font-black !text-6xl !leading-[0.9] sm:!text-6xl md:!text-[6rem] uppercase md:!leading-[0.87]"
             rotationEnd="center center"
             wordAnimationEnd="center center"
           >

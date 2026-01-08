@@ -17,7 +17,7 @@ const partners = [
 
 const TechnicalPartners = () => {
     return (
-        <section className="py-20">
+        <section className="py-10 md:py-20">
             <div className="container mx-auto px-4">
                 <TitleHeader title="Technical Partners" sub="" />
                 <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
