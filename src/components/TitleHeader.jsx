@@ -1,13 +1,13 @@
 const TitleHeader = ({ title, sub, description }) => {
     return (
-        <div className="flex flex-col items-center gap-5 mb-10">
+        <div className="flex flex-col items-center gap-5 mb-8 md:mb-10">
             {sub && (
                 <div className="hero-badge">
                     <p className="font-general text-sm uppercase text-blue-50">{sub}</p>
                 </div>
             )}
             <div>
-                <h2 className="font-zentry text-4xl md:text-7xl uppercase text-center text-white">
+                <h2 className="font-zentry text-5xl md:text-7xl uppercase text-center text-white">
                     {title}
                 </h2>
                 {description && (

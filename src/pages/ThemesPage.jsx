@@ -236,7 +236,7 @@ const ThemesPage = () => {
     const [selectedTheme, setSelectedTheme] = useState(null);
 
     return (
-        <section id="themes" className="py-20 bg-black text-white relative overflow-hidden min-h-screen">
+        <section id="themes" className="pt-28 md:pt-32 pb-20 bg-[#060010] text-white relative overflow-hidden min-h-screen">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(87,36,255,0.15),transparent_70%)]" />
@@ -249,7 +249,7 @@ const ThemesPage = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="text-center font-zentry text-4xl md:text-7xl mb-16 uppercase"
+                    className="text-center font-zentry text-5xl md:text-7xl mb-8 md:mb-16 uppercase"
                 >
                     Themes
                 </motion.h2>
@@ -261,7 +261,7 @@ const ThemesPage = () => {
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="text-3xl md:text-4xl font-zentry mb-8 text-center lg:text-left text-blue-400 border-b border-blue-400/30 pb-4"
+                            className="text-3xl md:text-4xl font-zentry mb-4 md:mb-8 text-center lg:text-left text-blue-400 border-b border-blue-400/30 pb-4"
                         >
                             Software Track
                         </motion.h3>
@@ -275,7 +275,7 @@ const ThemesPage = () => {
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
                                 >
                                     <SpotlightCard
-                                        className="h-full flex flex-col items-start text-left gap-4 bg-[#1a0b2e]/60 border-neutral-800/50 p-6 rounded-xl hover:border-blue-500/30 transition-colors"
+                                        className="h-full flex flex-col items-start text-left gap-4 bg-[#1a0b2e]/60 border-neutral-800/50 p-6 rounded-xl transition-colors"
                                         spotlightColor="rgba(59, 130, 246, 0.2)"
                                     >
                                         <div className="p-3 rounded-lg bg-blue-500/10 self-start">
@@ -308,7 +308,7 @@ const ThemesPage = () => {
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="text-3xl md:text-4xl font-zentry mb-8 text-center lg:text-left text-green-400 border-b border-green-400/30 pb-4"
+                            className="text-3xl md:text-4xl font-zentry mb-4 md:mb-8 text-center lg:text-left text-green-400 border-b border-green-400/30 pb-4"
                         >
                             Software + Hardware Track
                         </motion.h3>
@@ -322,7 +322,7 @@ const ThemesPage = () => {
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
                                 >
                                     <SpotlightCard
-                                        className="h-full flex flex-col items-start text-left gap-4 bg-[#1a0b2e]/60 border-neutral-800/50 p-6 rounded-xl hover:border-green-500/30 transition-colors"
+                                        className="h-full flex flex-col items-start text-left gap-4 bg-[#1a0b2e]/60 border-neutral-800/50 p-6 rounded-xl transition-colors"
                                         spotlightColor="rgba(34, 197, 94, 0.2)"
                                     >
                                         <div className="p-3 rounded-lg bg-green-500/10 self-start">

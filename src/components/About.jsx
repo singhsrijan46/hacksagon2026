@@ -52,7 +52,7 @@ const About = () => {
 
   return (
     <div id="about" className="min-h-screen w-screen">
-      <div className="relative mb-8 mt-32 flex flex-col items-center gap-1">
+      <div className="relative mb-2 md:mb-8 mt-16 md:mt-32 flex flex-col items-center gap-1">
         <p className="welcome-text font-general text-sm uppercase md:text-[10px] text-white opacity-0 translate-y-10 leading-[0.85]">
           Welcome to Hacksagon
         </p>
@@ -62,8 +62,8 @@ const About = () => {
           enableBlur={true}
           baseRotation={5}
           blurStrength={10}
-          containerClassName="mt-5 text-center"
-          textClassName="text-white font-zentry font-black text-7xl md:text-[6rem] uppercase leading-[0.87] sm:px-32"
+          containerClassName="mt-5 text-center px-4 sm:px-8 md:px-32"
+          textClassName="text-white font-zentry font-black !text-6xl !leading-[0.9] sm:!text-6xl md:!text-[6rem] uppercase md:!leading-[0.87]"
           rotationEnd="center center"
           wordAnimationEnd="center center"
         >
@@ -88,8 +88,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-screen py-16">
-        <div className="container mx-auto px-10 md:px-20 lg:px-32 font-circular-web text-lg text-blue-50 text-justify leading-relaxed about-description opacity-0 translate-y-10">
+      <div className="w-screen py-10 md:py-16">
+        <div className="container mx-auto px-10 md:px-20 lg:px-32 font-circular-web text-sm md:text-lg text-blue-50 text-justify leading-relaxed about-description opacity-0 translate-y-10">
           <p>
             HACKSAGON was first launched in 2020 as a collaborative initiative to
             bring together innovative minds from across the nation. The inaugural

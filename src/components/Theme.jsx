@@ -31,18 +31,52 @@ const Theme = () => {
                     onEnter: () => {
                         setCurrentCategory(track.category);
                         setCurrentDescription(track.description);
-                        gsap.to(`.track-name-${index}`, { color: '#5226fe' });
+                        gsap.to(`.track-name-${index}`, {
+                            color: '#5542ff',
+                            scale: 1.15,
+                            transformOrigin: 'center center',
+                            marginBottom: '15px',
+                            marginTop: '15px',
+                            duration: 0.3,
+                            overwrite: 'auto',
+                            ease: 'power2.out'
+                        });
                     },
                     onLeave: () => {
-                        gsap.to(`.track-name-${index}`, { color: 'white' });
+                        gsap.to(`.track-name-${index}`, {
+                            color: 'white',
+                            scale: 1,
+                            transformOrigin: 'center center',
+                            marginBottom: '0px',
+                            marginTop: '0px',
+                            duration: 0.3,
+                            overwrite: 'auto',
+                            ease: 'power2.out'
+                        });
                     },
                     onEnterBack: () => {
                         setCurrentCategory(track.category);
                         setCurrentDescription(track.description);
-                        gsap.to(`.track-name-${index}`, { color: '#5226fe' });
+                        gsap.to(`.track-name-${index}`, {
+                            color: '#5542ff',
+                            scale: 1.15,
+                            transformOrigin: 'center center',
+                            marginBottom: '15px',
+                            marginTop: '15px',
+                            duration: 0.3,
+                            overwrite: 'auto',
+                            ease: 'power2.out'
+                        });
                     },
                     onLeaveBack: () => {
-                        gsap.to(`.track-name-${index}`, { color: 'white' });
+                        gsap.to(`.track-name-${index}`, {
+                            color: 'white',
+                            scale: 1,
+                            transformOrigin: 'center center',
+                            marginBottom: '0px',
+                            marginTop: '0px',
+                            duration: 0.3
+                        });
                     }
                 }
             });
@@ -54,12 +88,12 @@ const Theme = () => {
     }, []);
 
     return (
-        <section className="min-h-screen w-full bg-[#060010] text-white p-5 md:p-10 md:pb-40 mt-32">
-            <h1 className="font-zentry text-4xl md:text-7xl mb-20 uppercase text-center w-full">THEMES</h1>
+        <section className="min-h-screen w-full bg-[#060010] text-white p-4 pb-20 md:p-10 md:pb-40 mt-10 md:mt-32">
+            <h1 className="font-zentry text-5xl md:text-7xl mb-10 md:mb-20 uppercase text-center w-full">THEMES</h1>
 
-            <div className="flex flex-col md:flex-row space-x-10 w-full justify-center">
-                {/* Left Column */}
-                <div className="w-1/2 flex flex-col max-lg:hidden space-y-5 justify-center items-end text-right pr-20">
+            <div className="flex flex-col md:flex-row md:space-x-10 w-full justify-center">
+                {/* Left Column - Desktop only */}
+                <div className="hidden md:flex md:w-1/2 flex-col space-y-5 justify-center items-end text-right pr-20">
                     <h1 className="font-zentry text-5xl md:text-7xl text-violet-50 uppercase leading-none">
                         {currentCategory === 'hardware+software' ? 'HARDWARE + SOFTWARE' : (currentCategory || 'Select a Track')}
                     </h1>
@@ -68,15 +102,15 @@ const Theme = () => {
                     </p>
                 </div>
 
-                {/* Right Column */}
-                <div className="w-1/2">
+                {/* Right Column - Tracks */}
+                <div className="w-full md:w-1/2 px-2 md:px-0">
                     {trackData.map((track, index) => (
                         <div
                             key={index}
-                            className={`flex items-center space-x-5 track-${index} mb-4`}
+                            className={`flex items-center space-x-2 md:space-x-5 track-${index} mb-3 md:mb-4`}
                             data-category={track.category}
                         >
-                            <h1 className={`font-general text-2xl md:text-3xl font-bold uppercase track-name-${index}`}>
+                            <h1 className={`font-general text-base sm:text-xl md:text-3xl font-bold uppercase track-name-${index} leading-tight`}>
                                 - {track.name}
                             </h1>
                         </div>

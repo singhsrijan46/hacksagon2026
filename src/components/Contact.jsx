@@ -1,5 +1,5 @@
 import { FaEnvelope, FaPhone, FaLocationArrow, FaInstagram, FaLinkedin, FaFacebookF, FaGlobe } from "react-icons/fa";
-import Button from "./Button";
+
 
 // Placeholder data - User can replace with actual contact details
 const contactPersons = [
@@ -55,7 +55,7 @@ const socialLinks = [
 
 const Contact = () => {
     return (
-        <div id="contact-2" className="my-10 min-h-96 w-screen px-10">
+        <div id="contact" className="my-6 md:my-10 min-h-96 w-screen px-10">
             <div className="relative rounded-lg bg-black py-10 text-blue-50 sm:overflow-hidden border border-white/10">
 
                 <div className="flex flex-col lg:flex-row items-stretch justify-between px-6 md:px-10 gap-8">
@@ -76,26 +76,26 @@ const Contact = () => {
 
                         {/* General Contact Buttons */}
                         <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                            <Button
-                                title="Mail Us"
-                                leftIcon={<FaEnvelope />}
-                                containerClass="bg-blue-50 text-black hover:bg-yellow-300 transition-colors !px-5 !py-2 text-sm"
+                            <button
+                                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
                                 onClick={() => window.location.href = 'mailto:contact@hacksagon.com'}
-                            />
+                            >
+                                <FaEnvelope /> Mail Us
+                            </button>
 
-                            <Button
-                                title="Call Us"
-                                leftIcon={<FaPhone />}
-                                containerClass="bg-blue-50 text-black hover:bg-yellow-300 transition-colors !px-5 !py-2 text-sm"
+                            <button
+                                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
                                 onClick={() => window.location.href = 'tel:+911234567890'}
-                            />
+                            >
+                                <FaPhone /> Call Us
+                            </button>
 
-                            <Button
-                                title="Get Directions"
-                                leftIcon={<FaLocationArrow />}
-                                containerClass="bg-blue-50 text-black hover:bg-yellow-300 transition-colors !px-5 !py-2 text-sm"
+                            <button
+                                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
                                 onClick={() => window.open('https://www.google.com/maps?q=ABV-Indian+Institute+of+Information+Technology+and+Management,+Morena+Link+Road,+Gwalior,+Madhya+Pradesh+474015,+India', '_blank')}
-                            />
+                            >
+                                <FaLocationArrow className="group-hover:rotate-45 transition-transform" /> Get Directions
+                            </button>
                         </div>
 
                         {/* Map */}

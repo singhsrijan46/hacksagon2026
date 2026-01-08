@@ -1,15 +1,17 @@
 import gsap from "gsap";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
-import Button from "./Button";
+
 import ScrollReveal from "./reactbits/ScrollReveal";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Schedule = () => {
   const frameRef = useRef(null);
+  const navigate = useNavigate();
 
   useGSAP(() => {
     gsap.to(".story-subtitle", {
@@ -65,7 +67,7 @@ const Schedule = () => {
 
   return (
     <div id="story" className="min-h-dvh w-screen bg-[#060010] text-blue-50">
-      <div className="flex size-full flex-col items-center py-10 pb-24">
+      <div className="flex size-full flex-col items-center py-4 pb-12 md:py-10 md:pb-24">
         <p className="story-subtitle font-general text-sm uppercase md:text-[10px] opacity-0 translate-y-10 leading-[0.85]">
           HACKSAGON EVENT SCHEDULE
         </p>
@@ -76,8 +78,8 @@ const Schedule = () => {
             enableBlur={true}
             baseRotation={5}
             blurStrength={10}
-            containerClassName="mt-5 text-center pointer-events-none mix-blend-difference relative z-10"
-            textClassName="font-zentry text-white font-black text-7xl md:text-[6rem] uppercase leading-[0.87]"
+            containerClassName="mt-5 text-center pointer-events-none mix-blend-difference relative z-10 px-4 sm:px-8 md:px-32"
+            textClassName="font-zentry text-white font-black !text-6xl !leading-[0.9] sm:!text-6xl md:!text-[6rem] uppercase md:!leading-[0.87]"
             rotationEnd="center center"
             wordAnimationEnd="center center"
           >
@@ -135,11 +137,13 @@ const Schedule = () => {
               Explore the full schedule and stay on track throughout the hackathon journey.
             </p>
 
-            <Button
+            <button
               id="realm-btn"
-              title="view schedule"
-              containerClass="mt-5"
-            />
+              className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white px-7 py-3 mt-5 font-general text-xs uppercase"
+              onClick={() => navigate('/schedule')}
+            >
+              view schedule
+            </button>
           </div>
         </div>
       </div>

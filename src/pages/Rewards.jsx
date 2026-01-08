@@ -24,7 +24,7 @@ const rewardsData = [
 
 const Rewards = () => {
     return (
-        <section id="rewards" className="py-20 bg-black text-white relative overflow-hidden min-h-screen">
+        <section id="rewards" className="pt-16 md:pt-32 pb-10 md:pb-20 bg-[#060010] text-white relative overflow-hidden min-h-screen">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.1),transparent_70%)]" />
@@ -37,12 +37,12 @@ const Rewards = () => {
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center font-zentry text-4xl md:text-6xl mb-4 uppercase text-yellow-400"
+                    className="text-center font-zentry text-5xl md:text-7xl mb-4 uppercase text-yellow-400"
                 >
                     Prize Pool
                 </motion.h1>
 
-                <div className="text-6xl md:text-9xl font-black text-white mb-20 flex items-center gap-2">
+                <div className="text-6xl md:text-9xl font-black font-robert-medium text-white mb-8 md:mb-20 flex items-center gap-2">
                     <span>₹</span>
                     <CountUp
                         to={250000}
