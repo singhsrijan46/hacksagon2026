@@ -21,7 +21,8 @@ export default function TiltedCard({
     showTooltip = true,
     overlayContent = null,
     displayOverlayContent = false,
-    containerClass = ""
+    containerClass = "",
+    imageClass = "bg-white"
 }) {
     const ref = useRef(null);
     const x = useMotionValue(0);
@@ -103,7 +104,7 @@ export default function TiltedCard({
                 <motion.img
                     src={imageSrc}
                     alt={altText}
-                    className="absolute top-0 left-0 object-contain p-4 pb-10 rounded-[15px] will-change-transform [transform:translateZ(0)] bg-white"
+                    className={`absolute top-0 left-0 object-contain p-4 pb-10 rounded-[15px] will-change-transform [transform:translateZ(0)] ${imageClass}`}
                     style={{
                         width: imageWidth,
                         height: imageHeight
