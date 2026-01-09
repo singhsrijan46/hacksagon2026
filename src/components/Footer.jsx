@@ -17,16 +17,16 @@ const Footer = () => {
               The premier hardware + software hackathon bringing together innovators, creators, and problem solvers.
             </p>
             <div className="flex gap-5">
-              <a href="#" className="text-white hover:text-yellow-300 transition-colors duration-300">
+              <a href="https://www.instagram.com/hacksagon" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-300 transition-colors duration-300">
                 <FaInstagram size={22} />
               </a>
-              <a href="#" className="text-white hover:text-yellow-300 transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/hacksagon" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-300 transition-colors duration-300">
                 <FaLinkedin size={22} />
               </a>
-              <a href="#" className="text-white hover:text-yellow-300 transition-colors duration-300">
+              <a href="https://www.hacksagon.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-300 transition-colors duration-300">
                 <FaGlobe size={22} />
               </a>
-              <a href="#" className="text-white hover:text-yellow-300 transition-colors duration-300">
+              <a href="https://www.facebook.com/hacksagon" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-300 transition-colors duration-300">
                 <FaFacebookF size={22} />
               </a>
             </div>
