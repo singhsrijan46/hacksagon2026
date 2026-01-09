@@ -88,7 +88,7 @@ const Theme = () => {
     }, []);
 
     return (
-        <section className="min-h-screen w-full bg-[#060010] text-white p-4 pb-20 md:p-10 md:pb-40 mt-10 md:mt-32">
+        <section className="w-full bg-[#060010] text-white p-4 pb-0 md:p-10 md:pb-10 mt-10 md:mt-20">
             <h1 className="font-zentry text-5xl md:text-7xl mb-10 md:mb-20 uppercase text-center w-full">THEMES</h1>
 
             <div className="flex flex-col md:flex-row md:space-x-10 w-full justify-center">
