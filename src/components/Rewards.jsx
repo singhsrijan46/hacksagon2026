@@ -67,7 +67,7 @@ const Rewards = () => {
     });
 
     return (
-        <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+        <div className={`mt-0 bg-black-100 rounded-[20px]`}>
             <div
                 className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[200px] md:min-h-[300px] flex flex-col items-center justify-center gap-1`}
             >

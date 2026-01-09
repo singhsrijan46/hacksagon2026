@@ -79,16 +79,7 @@ const NavBar = () => {
       return;
     }
     if (item === "Contact") {
-      if (location.pathname !== '/') {
-        navigate('/#contact');
-        setTimeout(() => {
-          const element = document.getElementById('contact');
-          if (element) element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      } else {
-        const element = document.getElementById('contact');
-        if (element) element.scrollIntoView({ behavior: 'smooth' });
-      }
+      navigate('/contact');
       return;
     }
 
