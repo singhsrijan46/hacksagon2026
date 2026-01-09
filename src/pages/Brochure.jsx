@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "motion/react";
 import { TiLocationArrow } from "react-icons/ti";
 
 const Brochure = () => {
@@ -12,28 +11,19 @@ const Brochure = () => {
             </div>
 
             <div className="container mx-auto px-4 md:px-10 relative z-10 flex flex-col items-center text-center">
-                <motion.h1
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="font-zentry text-5xl md:text-7xl mb-8 uppercase"
+                <h1
+                    className="font-zentry text-5xl md:text-7xl mb-8 uppercase text-white"
                 >
                     Hacksagon Brochure
-                </motion.h1>
+                </h1>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                <p
                     className="font-general text-lg md:text-xl text-blue-50/70 max-w-2xl mb-12"
                 >
                     Discover everything about Hacksagon 2026. Download our detailed brochure to learn more about the tracks, themes, sponsors, and what awaits you.
-                </motion.p>
+                </p>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
+                <div
                     className="flex flex-col md:flex-row gap-6 items-center"
                 >
                     <a
@@ -56,12 +46,9 @@ const Brochure = () => {
                             View Online
                         </span>
                     </a>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
+                <div
                     className="mt-20 w-full max-w-4xl p-4 bg-[#1a0b2e]/50 border border-neutral-800/50 rounded-xl backdrop-blur-sm"
                 >
                     {/* Preview Placeholder - Using the SVG as an image if browser supports, or just a generic placeholder */}
@@ -75,7 +62,7 @@ const Brochure = () => {
                             <span className="bg-black/70 text-white px-4 py-2 rounded-full font-general text-sm">Preview</span>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

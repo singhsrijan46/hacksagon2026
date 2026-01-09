@@ -23,7 +23,7 @@ const softwareThemes = [
     {
         title: "Mobile App Development Track",
         description: "Create sophisticated mobile applications with features like AI, IoT, and real-time communication.",
-        icon: <FaMobileAlt className="text-4xl text-green-400" />,
+        icon: <FaMobileAlt className="text-4xl text-blue-400" />,
         objective: "To create sophisticated mobile applications that provide rich user experiences, integrate with devices, and utilize advanced features such as AI, IoT, and real-time communication.",
         techStack: [
             "Front-end: React Native, Flutter, JavaScript (ES6+), Dart",
@@ -39,7 +39,7 @@ const softwareThemes = [
     {
         title: "Data Science & Machine Learning",
         description: "Create predictive models and implement sophisticated machine learning algorithms to solve real-world problems.",
-        icon: <FaDatabase className="text-4xl text-purple-400" />,
+        icon: <FaDatabase className="text-4xl text-blue-400" />,
         objective: "To create predictive models, analyze large datasets, and implement sophisticated machine learning algorithms that can address real-world problems.",
         techStack: [
             "Programming: Python, NumPy, Pandas, Scikit-Learn, TensorFlow, PyTorch",
@@ -56,7 +56,7 @@ const softwareThemes = [
     {
         title: "Blockchain & Cryptography Track",
         description: "Explore blockchain, contracts, and cryptographic techniques for security, scalability, and decentralization.",
-        icon: <FaBitcoin className="text-4xl text-yellow-400" />,
+        icon: <FaBitcoin className="text-4xl text-blue-400" />,
         objective: "To explore the implementation of blockchain technology, smart contracts, and cryptographic techniques in real-world applications, ensuring security, scalability, and decentralization.",
         techStack: [
             "Blockchain: Ethereum, Hyperledger, Solidity, Truffle, Remix",
@@ -73,7 +73,7 @@ const softwareThemes = [
     {
         title: "Open Innovation Track",
         description: "Encourage participants to create scalable, sustainable, and impactful solutions for real-world challenges.",
-        icon: <FaLightbulb className="text-4xl text-orange-400" />,
+        icon: <FaLightbulb className="text-4xl text-blue-400" />,
         objective: "To encourage participants to create innovative solutions to real-world challenges using any technology stack, focusing on scalability, sustainability, and user impact.",
         techStack: [
             "Development: MERN/MEAN stack",
@@ -93,7 +93,7 @@ const hardwareThemes = [
     {
         title: "Smart Cities and IoT Solutions",
         description: "Enhance urban living with IoT, AI, and analytics for smarter, efficient, and sustainable cities.",
-        icon: <FaCity className="text-4xl text-cyan-400" />,
+        icon: <FaCity className="text-4xl text-green-400" />,
         objective: "To develop hardware and software solutions that enhance urban living by leveraging IoT technologies, data analytics, and AI.",
         techStack: [
             "Hardware: Raspberry Pi, Arduino, ESP32, sensors (temperature, humidity, motion), actuators, LoRa modules",
@@ -111,7 +111,7 @@ const hardwareThemes = [
     {
         title: "IoT-Enabled Healthcare and Assistive Technologies",
         description: "Revolutionize healthcare with tools for diagnosis, delivery, and assistive technologies.",
-        icon: <FaHeartbeat className="text-4xl text-red-400" />,
+        icon: <FaHeartbeat className="text-4xl text-green-400" />,
         objective: "To create innovative tools that improve healthcare delivery, enable early diagnosis, and assist individuals with disabilities.",
         techStack: [
             "Hardware: Wearables, Raspberry Pi, Arduino, ECG, SpO2 sensors",
@@ -127,7 +127,7 @@ const hardwareThemes = [
     {
         title: "Smart Wearables for Safety",
         description: "Develop wearables for monitoring, tracking, and emergency alerts, ensuring safety in real-time.",
-        icon: <FaShieldAlt className="text-4xl text-indigo-400" />,
+        icon: <FaShieldAlt className="text-4xl text-green-400" />,
         objective: "To create wearable devices that provide real-time monitoring, tracking, and emergency alert functionalities.",
         techStack: [
             "Microcontrollers: Arduino Nano, ESP32",
@@ -143,7 +143,7 @@ const hardwareThemes = [
     {
         title: "Disaster Management and Emergency Response",
         description: "Develop tools and systems to enhance preparedness, response, and recovery.",
-        icon: <FaFirstAid className="text-4xl text-pink-400" />,
+        icon: <FaFirstAid className="text-4xl text-green-400" />,
         objective: "To create tools and systems that improve disaster preparedness, response, and recovery.",
         techStack: [
             "Hardware: Drones, IoT sensors, GPS trackers",
@@ -159,7 +159,7 @@ const hardwareThemes = [
     {
         title: "Agritech and Rural Innovation",
         description: "Empower farmers with tech solutions for productivity, resource management, and enhanced market access.",
-        icon: <FaTractor className="text-4xl text-emerald-400" />,
+        icon: <FaTractor className="text-4xl text-green-400" />,
         objective: "To develop solutions for precision farming, automated irrigation, and market access for rural communities.",
         techStack: [
             "Hardware: IoT sensors, Arduino, drones",
