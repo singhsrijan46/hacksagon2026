@@ -50,7 +50,7 @@ const scheduleData = [
         description: "The main hackathon event where teams build their prototypes.",
         icon: <FaCode className="text-4xl text-green-400" />,
         subEvents: [
-            { label: "36hr Hackathon Sprint", date: "Mar 27-29", detail: "Teams will come and work on their projects getting it ready for final presentation" }
+            { label: "36hr Hackathon Sprint", date: "Mar 27th - 29th", detail: "Teams will come and work on their projects getting it ready for final presentation" }
         ]
     },
     {
