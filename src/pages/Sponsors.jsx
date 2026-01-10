@@ -81,8 +81,20 @@ const pastSponsors = [
         alt: "Coding Blok",
     },
     {
-        src: "https://i.postimg.cc/Kzczpdwn/codingblok.jpg",
-        alt: "Coding Blok",
+        src: "https://i.postimg.cc/gjkT5CRN/Devfolio_Ddq0c_Kk_Q.png",
+        alt: "Devfolio",
+    },
+    {
+        src: "https://i.postimg.cc/VNqZNfWS/ETHIndia_C8o_Lc_e_A.png",
+        alt: "ETHIndia",
+    },
+    {
+        src: "https://i.postimg.cc/Qtj4926s/polygon_DFQ0UIh_A.png",
+        alt: "Polygon",
+    },
+    {
+        src: "https://i.postimg.cc/fTVH9jvy/xyz_8Kxg4t_YD.png",
+        alt: "XYZ",
     }
 ];
 
@@ -151,7 +163,7 @@ const Sponsors = () => {
                 </div>
             </div>
 
-            {/* Current Sponsors Section */}
+            {/* Current Sponsors Section
             <div className="mb-20 md:mb-40">
                 <div className="container mx-auto px-4">
                     <TitleHeader title="Current Sponsors" sub="" />
@@ -170,6 +182,7 @@ const Sponsors = () => {
                     </div>
                 </div>
             </div>
+            */}
 
             {/* Past Sponsors Section */}
             <div className="container mx-auto px-8 md:px-24 pb-20">
