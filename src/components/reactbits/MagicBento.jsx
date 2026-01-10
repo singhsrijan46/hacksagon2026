@@ -673,7 +673,7 @@ const MagicBento = ({
                                                 <card.icon className="text-2xl md:text-4xl" />
                                             </div>
                                         )}
-                                        <span className="card__label text-xl md:text-3xl font-zentry opacity-80 uppercase tracking-widest">{card.label}</span>
+                                        <span className="card__label text-xl md:text-3xl font-zentry text-white uppercase tracking-widest">{card.label}</span>
                                     </div>
                                     <div className="card__content flex flex-col relative text-white mt-4">
                                         <h3 className={`card__title font-robert-medium text-2xl md:text-4xl m-0 mb-2 ${textAutoHide ? 'text-clamp-1' : ''}`}>

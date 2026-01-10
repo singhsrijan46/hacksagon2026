@@ -76,7 +76,7 @@ const WhyParticipate = () => {
             <div className={`-mt-8 md:-mt-20 pb-14 ${styles.paddingX} flex flex-col items-center`}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl">
                     {reasons.map((card, index) => (
-                        <SpotlightCard key={index} className="w-full min-h-[300px] md:min-h-[320px] bg-[#170c26] border-[#2e2343] flex flex-col justify-between" spotlightColor="rgba(255, 255, 255, 0.1)">
+                        <SpotlightCard key={index} className="w-full min-h-[300px] md:min-h-[320px] !bg-[#2d1b4e]/40 backdrop-blur-md !border-white/10 flex flex-col justify-between" spotlightColor="rgba(255, 255, 255, 0.1)">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                                     <card.icon className="text-2xl text-white" />

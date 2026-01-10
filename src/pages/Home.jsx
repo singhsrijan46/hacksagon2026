@@ -17,7 +17,7 @@ const Home = () => {
             <Rewards />
             <Schedule />
             <WhyParticipate />
-            <CurrentSponsors />
+            {/* <CurrentSponsors /> */}
 
         </>
     );
