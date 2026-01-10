@@ -18,7 +18,7 @@ const scheduleData = [
         icon: <FaClipboardList className="text-4xl text-blue-400" />,
         subEvents: [
             { label: "Registration Opens", date: "Jan 15th", detail: "Registration opens for individuals and cross-university teams" },
-            { label: "Registration Deadline", date: "Mar 10th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
+            { label: "Registration Deadline", date: "Jan 30th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
         ]
     },
     {
@@ -28,8 +28,8 @@ const scheduleData = [
         description: "Evaluation of submitted ideas and announcement of shortlisted teams.",
         icon: <FaLightbulb className="text-4xl text-yellow-400" />,
         subEvents: [
-            { label: "Format Checking & Relevancy", date: "Mar 10th - Mar 14th", detail: "Evaluation of sent PPT/PDF files" },
-            { label: "Announcement of Result", date: "Mar 15th", detail: "Leaders will receive mails of their team getting selected" }
+            { label: "Format Checking & Relevancy", date: "Jan 31th - Feb 8th", detail: "Evaluation of sent PPT/PDF files" },
+            { label: "Announcement of Result", date: "Feb 10th", detail: "Leaders will receive mails of their team getting selected" }
         ]
     },
     {
@@ -39,8 +39,8 @@ const scheduleData = [
         description: "Final registration for the prototype round.",
         icon: <FaFlag className="text-4xl text-orange-400" />,
         subEvents: [
-            { label: "Form Release for Registration", date: "Mar 16th (Tentative)", detail: "Teams who have secured place in final round have to fill the form." },
-            { label: "Form Closing Date", date: "Mar 24th (Tentative)", detail: "Last date to submit." }
+            { label: "Form Release for Registration", date: "Feb 11th (Tentative)", detail: "Teams who have secured place in final round have to fill the form." },
+            { label: "Form Closing Date", date: "Feb 28th (Tentative)", detail: "Last date to submit." }
         ]
     },
     {
