@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="flex flex-col gap-4">
               <h3 className="font-zentry text-lg uppercase tracking-wider text-white">About</h3>
               <ul className="flex flex-col gap-3 font-circular-web text-sm text-blue-50/60">
-                <li><a href="#about" className="hover:text-yellow-300 transition-colors duration-300">About Us</a></li>
+                <li><a href="/#about" className="hover:text-yellow-300 transition-colors duration-300">About Us</a></li>
                 <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-yellow-300 transition-colors duration-300">Past Events</a></li>
                 <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-yellow-300 transition-colors duration-300">Team</a></li>
               </ul>
