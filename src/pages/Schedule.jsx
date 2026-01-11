@@ -13,75 +13,54 @@ const scheduleData = [
     {
         id: 1,
         title: "Phase 1.1: Registration & Idea Submission",
-        date: "15th Jan 2025 to 28th March 2025",
+        date: "15th Jan 2025 to 10th March 2025",
         description: "Begin your journey by registering and forming your team with peers. Submit your project idea in PDF/PPT format given by organising team.",
         icon: <FaClipboardList className="text-4xl text-blue-400" />,
         subEvents: [
             { label: "Registration Opens", date: "Jan 15th", detail: "Registration opens for individuals and cross-university teams" },
-            { label: "Registration Deadline", date: "Mar 28th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
+            { label: "Registration Deadline", date: "Jan 30th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
         ]
     },
     {
         id: 2,
         title: "Phase 1.2: Idea Review and Results",
-        date: "3rd April 2025",
+        date: "15th March 2025",
         description: "Evaluation of submitted ideas and announcement of shortlisted teams.",
         icon: <FaLightbulb className="text-4xl text-yellow-400" />,
         subEvents: [
-            { label: "Format Checking & Relevancy", date: "Mar 28th - Apr 2nd", detail: "Evaluation of sent PPT/PDF files" },
-            { label: "Announcement of Result", date: "Apr 3rd", detail: "Leaders will receive mails of their team getting selected" }
-        ]
-    },
-    {
-        id: 3,
-        title: "Phase 2.1: Video Submission Round",
-        date: "4th Apr 2025 - 11th Apr 2025",
-        description: "Shortlisted teams submit a video presentation of their idea.",
-        icon: <FaUsers className="text-4xl text-purple-400" />,
-        subEvents: [
-            { label: "Form Release", date: "Apr 4th", detail: "Filling of mentioned details in it regarding your project and more" },
-            { label: "Form Closing", date: "Apr 10th", detail: "No forms will be accepted after this date" }
-        ]
-    },
-    {
-        id: 4,
-        title: "Phase 2.2: Results of Round 2",
-        date: "20th Apr 2025 (Tentative)",
-        description: "Announcement of teams qualifying for the next round.",
-        icon: <FaRocket className="text-4xl text-pink-400" />,
-        subEvents: [
-            { label: "Announcement of Result", date: "Apr 20th", detail: "Leaders will receive mails of their team getting selected" }
+            { label: "Format Checking & Relevancy", date: "Jan 31th - Feb 8th", detail: "Evaluation of sent PPT/PDF files" },
+            { label: "Announcement of Result", date: "Feb 10th", detail: "Leaders will receive mails of their team getting selected" }
         ]
     },
     {
         id: 5,
-        title: "Phase 3.1: Registration of Round 3",
-        date: "3rd week of Apr - 2nd week of May",
+        title: "Phase 2.1: Registration of Round 2",
+        date: "3rd week of March",
         description: "Final registration for the prototype round.",
         icon: <FaFlag className="text-4xl text-orange-400" />,
         subEvents: [
-            { label: "Form Release for Registration", date: "Apr 21st (Tentative)", detail: "Teams who have secured place in final round have to fill the form." },
-            { label: "Form Closing Date", date: "May 5th (Tentative)", detail: "Last date to submit." }
+            { label: "Form Release for Registration", date: "Feb 11th (Tentative)", detail: "Teams who have secured place in final round have to fill the form." },
+            { label: "Form Closing Date", date: "Feb 28th (Tentative)", detail: "Last date to submit." }
         ]
     },
     {
         id: 6,
-        title: "Phase 3.2: Prototype Round at IIITM",
-        date: "9-11th May 2025",
+        title: "Phase 2.2: Prototype Round at IIITM",
+        date: "27-29th March 2025",
         description: "The main hackathon event where teams build their prototypes.",
         icon: <FaCode className="text-4xl text-green-400" />,
         subEvents: [
-            { label: "36hr Hackathon Sprint", date: "May 9-11", detail: "Teams will come and work on their projects getting it ready for final presentation" }
+            { label: "36hr Hackathon Sprint", date: "Mar 27th - 29th", detail: "Teams will come and work on their projects getting it ready for final presentation" }
         ]
     },
     {
         id: 7,
-        title: "Phase 3.3: Final Result",
-        date: "12th May 2025",
+        title: "Phase 2.3: Final Result",
+        date: "29th March 2025",
         description: "Declaration of winners and prize distribution.",
         icon: <FaAward className="text-4xl text-gold-400" />,
         subEvents: [
-            { label: "Release of final Results", date: "12th May 2025", detail: "Release of final Results and Distribution of Prizes" }
+            { label: "Release of final Results", date: "29th March 2026", detail: "Release of final Results and Distribution of Prizes" }
         ]
     }
 ];

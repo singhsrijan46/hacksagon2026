@@ -31,18 +31,52 @@ const Theme = () => {
                     onEnter: () => {
                         setCurrentCategory(track.category);
                         setCurrentDescription(track.description);
-                        gsap.to(`.track-name-${index}`, { color: '#5226fe' });
+                        gsap.to(`.track-name-${index}`, {
+                            color: '#5542ff',
+                            scale: 1.15,
+                            transformOrigin: 'center center',
+                            marginBottom: '15px',
+                            marginTop: '15px',
+                            duration: 0.3,
+                            overwrite: 'auto',
+                            ease: 'power2.out'
+                        });
                     },
                     onLeave: () => {
-                        gsap.to(`.track-name-${index}`, { color: 'white' });
+                        gsap.to(`.track-name-${index}`, {
+                            color: 'white',
+                            scale: 1,
+                            transformOrigin: 'center center',
+                            marginBottom: '0px',
+                            marginTop: '0px',
+                            duration: 0.3,
+                            overwrite: 'auto',
+                            ease: 'power2.out'
+                        });
                     },
                     onEnterBack: () => {
                         setCurrentCategory(track.category);
                         setCurrentDescription(track.description);
-                        gsap.to(`.track-name-${index}`, { color: '#5226fe' });
+                        gsap.to(`.track-name-${index}`, {
+                            color: '#5542ff',
+                            scale: 1.15,
+                            transformOrigin: 'center center',
+                            marginBottom: '15px',
+                            marginTop: '15px',
+                            duration: 0.3,
+                            overwrite: 'auto',
+                            ease: 'power2.out'
+                        });
                     },
                     onLeaveBack: () => {
-                        gsap.to(`.track-name-${index}`, { color: 'white' });
+                        gsap.to(`.track-name-${index}`, {
+                            color: 'white',
+                            scale: 1,
+                            transformOrigin: 'center center',
+                            marginBottom: '0px',
+                            marginTop: '0px',
+                            duration: 0.3
+                        });
                     }
                 }
             });
@@ -54,8 +88,8 @@ const Theme = () => {
     }, []);
 
     return (
-        <section className="min-h-screen w-full bg-[#060010] text-white p-4 md:p-10 md:pb-40 mt-16 md:mt-32">
-            <h1 className="font-zentry text-4xl md:text-7xl mb-10 md:mb-20 uppercase text-center w-full">THEMES</h1>
+        <section className="w-full bg-[#060010] text-white p-4 pb-0 md:p-10 md:pb-10 mt-10 md:mt-20">
+            <h1 className="font-zentry text-5xl md:text-7xl mb-10 md:mb-20 uppercase text-center w-full">THEMES</h1>
 
             <div className="flex flex-col md:flex-row md:space-x-10 w-full justify-center">
                 {/* Left Column - Desktop only */}

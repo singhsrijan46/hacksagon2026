@@ -450,7 +450,7 @@ const GlobalSpotlight = ({
 
 const BentoCardGrid = ({ children, gridRef }) => (
     <div
-        className="bento-section grid gap-2 p-3 max-w-[54rem] select-none relative"
+        className="bento-section grid gap-6 p-3 max-w-[54rem] select-none relative"
         style={{ fontSize: 'clamp(1rem, 0.9rem + 0.5vw, 1.5rem)' }}
         ref={gridRef}
     >
@@ -474,6 +474,7 @@ const useMobileDetection = () => {
 };
 
 const MagicBento = ({
+    items,
     textAutoHide = true,
     enableStars = true,
     enableSpotlight = true,
@@ -489,6 +490,8 @@ const MagicBento = ({
     const gridRef = useRef(null);
     const isMobile = useMobileDetection();
     const shouldDisableAnimations = disableAnimations || isMobile;
+
+    const dataToRender = items || cardData;
 
     return (
         <>
@@ -523,9 +526,13 @@ const MagicBento = ({
           
           @media (min-width: 1024px) {
             .card-responsive {
-              grid-template-columns: repeat(4, 1fr);
+              grid-template-columns: repeat(2, 1fr);
             }
             
+            /* Logic for specific grid layout if needed, but for dynamic items standard grid might be safer */
+            /* Only apply specific spans if we are using default cardData or if items length matches specific logic. */
+            /* For now, keeping as is, but might need adjustment for arbitrary items count */
+            ${!items ? `
             .card-responsive .card:nth-child(3) {
               grid-column: span 2;
               grid-row: span 2;
@@ -540,6 +547,7 @@ const MagicBento = ({
               grid-column: 4;
               grid-row: 3;
             }
+            ` : ''}
           }
           
           .card--border-glow::after {
@@ -607,14 +615,14 @@ const MagicBento = ({
           @media (max-width: 599px) {
             .card-responsive {
               grid-template-columns: 1fr;
-              width: 90%;
+              width: 100%;
               margin: 0 auto;
               padding: 0.5rem;
             }
             
             .card-responsive .card {
               width: 100%;
-              min-height: 180px;
+              min-height: 220px;
             }
           }
         `}
@@ -631,9 +639,9 @@ const MagicBento = ({
             )}
 
             <BentoCardGrid gridRef={gridRef}>
-                <div className="card-responsive grid gap-2">
-                    {cardData.map((card, index) => {
-                        const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[200px] w-full max-w-full p-5 rounded-[20px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${enableBorderGlow ? 'card--border-glow' : ''
+                <div className="card-responsive grid gap-6">
+                    {dataToRender.map((card, index) => {
+                        const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[300px] w-full max-w-full p-5 rounded-[20px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${enableBorderGlow ? 'card--border-glow' : ''
                             }`;
 
                         const cardStyle = {
@@ -660,14 +668,19 @@ const MagicBento = ({
                                     enableMagnetism={enableMagnetism}
                                 >
                                     <div className="card__header flex justify-between gap-3 relative text-white">
-                                        <span className="card__label text-base">{card.label}</span>
+                                        {card.icon && (
+                                            <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/20">
+                                                <card.icon className="text-2xl md:text-4xl" />
+                                            </div>
+                                        )}
+                                        <span className="card__label text-xl md:text-3xl font-zentry text-white uppercase tracking-widest">{card.label}</span>
                                     </div>
-                                    <div className="card__content flex flex-col relative text-white">
-                                        <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
+                                    <div className="card__content flex flex-col relative text-white mt-4">
+                                        <h3 className={`card__title font-robert-medium text-2xl md:text-4xl m-0 mb-2 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                                             {card.title}
                                         </h3>
                                         <p
-                                            className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}
+                                            className={`card__description text-sm leading-6 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}
                                         >
                                             {card.description}
                                         </p>
@@ -792,13 +805,20 @@ const MagicBento = ({
                                 }}
                             >
                                 <div className="card__header flex justify-between gap-3 relative text-white">
-                                    <span className="card__label text-base">{card.label}</span>
+                                    {card.icon && (
+                                        <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/20">
+                                            <card.icon className="text-2xl md:text-4xl" />
+                                        </div>
+                                    )}
+                                    <span className="card__label text-xl md:text-3xl font-zentry opacity-80 uppercase tracking-widest">{card.label}</span>
                                 </div>
-                                <div className="card__content flex flex-col relative text-white">
-                                    <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
+                                <div className="card__content flex flex-col relative text-white mt-4">
+                                    <h3 className={`card__title font-robert-medium text-2xl md:text-4xl m-0 mb-2 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                                         {card.title}
                                     </h3>
-                                    <p className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}>
+                                    <p
+                                        className={`card__description text-sm leading-6 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}
+                                    >
                                         {card.description}
                                     </p>
                                 </div>

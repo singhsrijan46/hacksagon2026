@@ -3,7 +3,7 @@ import TiltedCard from "../components/reactbits/TiltedCard";
 import TitleHeader from "../components/TitleHeader";
 
 const committeesResult = [
-    {
+    /* {
         category: "Patrons",
         members: [
             {
@@ -12,7 +12,7 @@ const committeesResult = [
                 image: "https://i.postimg.cc/mtFmWm5t/iiitdm-director.webp"
             }
         ]
-    },
+    }, */
     {
         category: "Organising Commitee",
         members: [
