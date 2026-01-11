@@ -19,8 +19,8 @@ const contactPersons = [
     {
         name: "Shivansh Katiyar",
         position: "Web Master",
-        email: "img_2024042@iiitm.ac.in",
-        image: "https://ui-avatars.com/api/?name=Shivansh+Katiyar&background=random&color=fff"
+        email: "shivanshk8.infi@gmail.com",
+        image: "https://i.postimg.cc/xjhw75Ps/1767469812351.jpg"
     }
 ];
 
