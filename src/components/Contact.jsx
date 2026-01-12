@@ -7,7 +7,7 @@ const contactPersons = [
     {
         name: "Daksha Mehta",
         position: "Vice Chairperson",
-        email: "img_2024015@iiitm.ac.in",
+        email: "mehtadaksha015@gmail.com",
         image: "https://ui-avatars.com/api/?name=Daksha+Mehta&background=random&color=fff"
     },
     {
