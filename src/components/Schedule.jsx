@@ -61,7 +61,7 @@ const Schedule = () => {
 
           <div className="mt-10 flex justify-center w-full pointer-events-auto">
             <TiltedCard
-              imageSrc="/img/schedule.png"
+              imageSrc="https://i.postimg.cc/gJCZ0P0b/schedule.png"
               altText="Hacksagon Schedule"
               captionText="Event Schedule"
               containerHeight={isMobile ? "200px" : "500px"}
