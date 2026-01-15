@@ -8,13 +8,13 @@ const contactPersons = [
         name: "Daksha Mehta",
         position: "Vice Chairperson",
         email: "mehtadaksha015@gmail.com",
-        image: "https://ui-avatars.com/api/?name=Daksha+Mehta&background=random&color=fff"
+        image: "https://i.postimg.cc/cJwgqVjd/Whats-App-Image-2026-01-15-at-10-32-36-PM.jpg"
     },
     {
         name: "Saksham Hans",
         position: "Vice Secretary",
         email: "bcs_2024060@iiitm.ac.in",
-        image: "https://ui-avatars.com/api/?name=Saksham+Hans&background=random&color=fff"
+        image: "https://i.postimg.cc/cJcP6JtK/1724094118414.jpg"
     },
     {
         name: "Shivansh Katiyar",
@@ -62,9 +62,9 @@ const socialLinks = [
 const Contact = () => {
     return (
         <div id="contact" className="my-6 md:my-10 min-h-96 w-full px-4 md:px-10">
-            <div className="relative rounded-lg bg-[#060010] py-10 text-blue-50 sm:overflow-hidden border border-white/10">
+            <div className="relative rounded-lg bg-[#060010] py-10 text-white sm:overflow-hidden border border-white/10">
 
-                <div className="flex flex-col lg:flex-row items-stretch justify-between px-6 md:px-10 gap-8">
+                <div className="flex flex-col lg:flex-row items-stretch justify-between px-6 md:px-10 gap-16">
 
                     {/* Left Side: Reach Us Info + Map + General Buttons */}
                     <div className="w-full lg:w-1/2 flex flex-col gap-6">
@@ -73,7 +73,7 @@ const Contact = () => {
                             <h3 className="special-font font-zentry text-3xl md:text-5xl font-black uppercase leading-[.9]">
                                 Reach <b>U</b>s
                             </h3>
-                            <p className="font-circular-web text-base md:text-lg text-blue-50/70 leading-relaxed">
+                            <p className="font-circular-web text-base md:text-lg text-white/70 leading-relaxed">
                                 ABV-Indian Institute of Information Technology and Management,<br />
                                 Morena Link Road, Gwalior,<br />
                                 Madhya Pradesh 474015, India.
@@ -84,14 +84,14 @@ const Contact = () => {
                         <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                             <a
                                 href="mailto:ieeestudentbranch@iiitm.ac.in"
-                                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
+                                className="group relative cursor-pointer overflow-hidden rounded-full bg-white text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
                             >
                                 <FaEnvelope /> Mail Us
                             </a>
 
 
                             <button
-                                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
+                                className="group relative cursor-pointer overflow-hidden rounded-full bg-white text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
                                 onClick={() => window.open('https://www.google.com/maps?q=ABV-Indian+Institute+of+Information+Technology+and+Management,+Morena+Link+Road,+Gwalior,+Madhya+Pradesh+474015,+India', '_blank')}
                             >
                                 <FaLocationArrow className="group-hover:rotate-45 transition-transform" /> Get Directions
@@ -116,36 +116,36 @@ const Contact = () => {
                     </div>
 
                     {/* Right Side: Contact Persons AND Socials */}
-                    <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start lg:pl-8 lg:border-l lg:border-t-0 border-t border-white/10 pt-10 lg:pt-0">
+                    <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start lg:pl-16 lg:border-l lg:border-t-0 border-t border-white/10 pt-10 lg:pt-0">
                         {/* Contact Persons Section */}
                         <div className="w-full flex-grow">
-                            <div className="mb-10 text-center md:text-left w-full">
-                                <h3 className="special-font font-zentry text-3xl md:text-5xl font-black uppercase leading-[.9]">
+                            <div className="mb-6 text-center md:text-left w-full">
+                                <h3 className="special-font font-zentry text-2xl md:text-4xl font-black uppercase leading-[.9]">
                                     Contact <b>P</b>ersons
                                 </h3>
                             </div>
 
-                            <div className="flex flex-col gap-6 w-full">
+                            <div className="flex flex-col gap-4 w-full">
                                 {contactPersons.map((person, index) => (
-                                    <div key={index} className="group relative flex items-center gap-6 w-full">
-                                        <div className="relative size-20 md:size-28 rounded-full overflow-hidden border-2 border-white/20 shrink-0">
+                                    <div key={index} className="group relative flex items-center gap-4 w-full">
+                                        <div className="relative size-16 md:size-20 rounded-full overflow-hidden border-2 border-white/20 shrink-0">
                                             <img
                                                 src={person.image}
                                                 alt={person.name}
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>
-                                        <div className="flex flex-col gap-1">
-                                            <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-                                                <h4 className="font-general text-xl md:text-3xl font-bold text-white leading-tight">
+                                        <div className="flex flex-col gap-0.5">
+                                            <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                                                <h4 className="font-general text-lg md:text-xl font-bold text-white leading-tight">
                                                     {person.name}
                                                 </h4>
-                                                <p className="font-circular-web text-sm md:text-lg text-blue-50/60 font-light">
+                                                <p className="font-circular-web text-xs md:text-sm text-white/60 font-light">
                                                     {person.position}
                                                 </p>
                                             </div>
                                             <div className="flex items-center gap-2">
-                                                <p className="font-circular-web text-xs md:text-base text-blue-50/80">
+                                                <p className="font-circular-web text-[10px] md:text-xs text-white/80">
                                                     {person.email}
                                                 </p>
                                                 <a
@@ -160,6 +160,47 @@ const Contact = () => {
                                     </div>
                                 ))}
                             </div>
+
+                        </div>
+
+                        {/* Developer Section */}
+                        <div className="w-full flex-grow mt-6">
+                            <div className="mb-6 text-center md:text-left w-full">
+                                <h3 className="special-font font-zentry text-2xl md:text-4xl font-black uppercase leading-[.9] text-white">
+                                    Develo<b>p</b>er
+                                </h3>
+                            </div>
+
+                            <div className="flex flex-col gap-4 w-full">
+                                <div className="group relative flex items-center gap-4 w-full">
+                                    <div className="relative size-16 md:size-20 rounded-full overflow-hidden border-2 border-white/20 shrink-0">
+                                        <img
+                                            src="https://i.postimg.cc/WbLc4z5Z/Whats-App-Image-2025-12-28-at-7-54-52-PM.jpg"
+                                            alt="Srijan Singh"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col gap-0.5">
+                                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                                            <h4 className="font-general text-lg md:text-xl font-bold text-white leading-tight">
+                                                Srijan Singh
+                                            </h4>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <p className="font-circular-web text-[10px] md:text-xs text-white/80">
+                                                singhsrijangkp@gmail.com
+                                            </p>
+                                            <a
+                                                href="mailto:singhsrijangkp@gmail.com"
+                                                className="p-1.5 bg-white/10 text-white rounded-full hover:bg-[#5542ff] transition-colors flex items-center justify-center"
+                                                title="Mail"
+                                            >
+                                                <FaEnvelope size={10} />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -167,10 +208,10 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="relative rounded-lg bg-[#060010] py-10 text-blue-50 sm:overflow-hidden border border-white/10 mt-6">
+            <div className="relative rounded-lg bg-[#060010] py-10 text-white sm:overflow-hidden border border-white/10 mt-6">
                 <div className="px-6 md:px-10">
                     <div className="mb-8 text-center">
-                        <h3 className="special-font font-zentry text-3xl md:text-5xl font-black uppercase leading-[.9] text-blue-50">
+                        <h3 className="special-font font-zentry text-3xl md:text-5xl font-black uppercase leading-[.9] text-white">
                             Our Social <b>A</b>ccounts!
                         </h3>
                     </div>
@@ -193,7 +234,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

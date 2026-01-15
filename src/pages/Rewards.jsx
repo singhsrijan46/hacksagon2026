@@ -22,6 +22,21 @@ const rewardsData = [
     }
 ];
 
+const pastWinnersImages = [
+    "https://i.postimg.cc/VL9C5SWt/516189553-719476854130190-7754464921513049681-n.jpg",
+    "https://i.postimg.cc/m2SPBvTp/515925259-1473208240517858-7460810488991657187-n.jpg",
+    "https://i.postimg.cc/zvFGDhYN/515056184-736671365414610-3569823210313674080-n.jpg",
+    "https://i.postimg.cc/zGBG53tZ/515304891-1797826584496761-373474846722368052-n.jpg",
+    "https://i.postimg.cc/DwMyzFH6/514628900-1736470793628029-5159374847356980556-n.jpg",
+    "https://i.postimg.cc/6qtBPQ2j/514735888-1150967953462687-5223638961092997015-n.jpg",
+    "https://i.postimg.cc/ZKYTFCh3/515454380-1049026650753929-8199138972147135276-n.jpg",
+    "https://i.postimg.cc/wj7gZZMV/516461263-659369177124294-5974343535152216177-n.jpg",
+    "https://i.postimg.cc/dtSK26Bz/515400588-1839870469923797-5986119387437056953-n.jpg",
+    "https://i.postimg.cc/Z5GtgqXr/514869285-614586398336873-6184765976976601133-n.jpg",
+    "https://i.postimg.cc/85D8p0pw/516524321-1392893361983038-4723986454472921963-n.jpg",
+    "https://i.postimg.cc/908sBXGP/515077784-646817905043360-6628845870023685907-n.jpg"
+];
+
 const Rewards = () => {
     return (
         <section id="rewards" className="pt-28 md:pt-32 pb-10 md:pb-20 bg-[#060010] text-white relative overflow-hidden min-h-screen">
@@ -53,8 +68,38 @@ const Rewards = () => {
                     />
                 </div>
 
+                <div className="w-full flex flex-col items-center mb-16">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center font-zentry text-5xl md:text-7xl mb-4 md:mb-10 uppercase text-white"
+                    >
+                        Past Year Winners
+                    </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 w-full">
+                        {pastWinnersImages.map((src, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3, delay: index * 0.05 }}
+                                className="relative overflow-hidden rounded-xl aspect-[4/3] border border-white/10"
+                            >
+                                <img
+                                    src={src}
+                                    alt={`Past Winner ${index + 1}`}
+                                    className="w-full h-full object-cover"
+                                />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+
+                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
                     {rewardsData.map((item, index) => (
                         <motion.div
                             key={index}
@@ -83,7 +128,9 @@ const Rewards = () => {
                             </SpotlightCard>
                         </motion.div>
                     ))}
-                </div>
+                </div> */}
+
+
             </div>
         </section>
     );

@@ -91,29 +91,19 @@ const About = () => {
       <div className="w-screen py-10 md:py-16">
         <div className="container mx-auto px-10 md:px-20 lg:px-32 font-circular-web text-sm md:text-lg text-blue-50 text-justify leading-relaxed about-description opacity-0 translate-y-10">
           <p>
-            HACKSAGON was first launched in 2020 as a collaborative initiative to
-            bring together innovative minds from across the nation. The inaugural
-            edition was successfully organized by ABV-IIITM IEEE Student Branch
-            in partnership with six IIITs, namely IIIT Una, IIIT Ranchi, IIIT
-            Lucknow, IIIT Nagpur, IIITDM Kurnool, and IIIT Bhagalpur which
-            witnessed registration from 293 teams with 1200 students and 95
-            teams being qualified for the final round.
+            HACKSAGON was first launched in 2020 as a collaborative initiative to bring together innovative minds from across the nation in partnership with 6 other IIITs.
           </p>
           <br />
           <p>
-            Building upon the robust foundation of its inaugural edition,
-            HACKSAGON 2025 aims to elevate innovation and collaboration to new
-            heights. This year, the hackathon begins in January 2025 and spans
-            three stages, concluding in mid-May 2025. Participants will have the
-            opportunity to ideate, prototype, and deliver impactful solutions
-            addressing real-world challenges for a prize pool of over Rs
-            2,50,000 and much more.
+            Building upon this legacy, HACKSAGON 2025 marked a significant milestone in the journey of the hackathon. Spanning from January to June 2025 and conducted across three rigorous stages, the event witnessed 2600+ registrations, with over 550 individuals, forming 180+ teams, qualifying for the offline grand finals. Participants ideated, prototyped, and delivered impactful solutions to real-world challenges, competing for a cash prize pool of ₹2,50,000, along with additional rewards and opportunities.
           </p>
           <br />
           <p>
-            The event features five sub-tracks, each within the Software Track
-            and the Hardware + Software Track, to encourage interdisciplinary
-            learning and innovation.
+            Continuing this momentum, HACKSAGON 2026 aims to further elevate innovation, collaboration, and technical excellence. This year also features a cash prize pool of ₹2,50,000, reaffirming the hackathon’s commitment to rewarding impactful ideas and cutting-edge solutions.
+          </p>
+          <br />
+          <p>
+            The event comprises 10 distinct tracks, distributed across the Software and Hardware + Software categories, fostering interdisciplinary learning and encouraging participants to build scalable, real-world solutions across diverse domains.
           </p>
         </div>
       </div>
