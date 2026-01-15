@@ -42,7 +42,7 @@ const socialLinks = [
     {
         name: "LinkedIn",
         icon: <FaLinkedin size={20} />,
-        url: "https://www.linkedin.com/company/abviiitmieee/",
+        url: "https://www.linkedin.com/in/abv-iiitm-ieee-student-branch/",
         color: "hover:text-blue-600"
     },
     {

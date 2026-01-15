@@ -20,7 +20,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/abv_iiitm_ieee/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-300 transition-colors duration-300">
                 <FaInstagram size={22} />
               </a>
-              <a href="https://www.linkedin.com/company/abviiitmieee/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-300 transition-colors duration-300">
+              <a href="https://www.linkedin.com/in/abv-iiitm-ieee-student-branch/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-300 transition-colors duration-300">
                 <FaLinkedin size={22} />
               </a>
               <a href="https://ieee.iiitm.ac.in/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-300 transition-colors duration-300">
@@ -40,8 +40,6 @@ const Footer = () => {
               <h3 className="font-zentry text-lg uppercase tracking-wider text-white">About</h3>
               <ul className="flex flex-col gap-3 font-circular-web text-sm text-blue-50/60">
                 <li><a href="/#about" className="hover:text-yellow-300 transition-colors duration-300">About Us</a></li>
-                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-yellow-300 transition-colors duration-300">Past Events</a></li>
-                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-yellow-300 transition-colors duration-300">Team</a></li>
               </ul>
             </div>
 
@@ -63,8 +61,6 @@ const Footer = () => {
           </p>
           {/* Optional visual balance or privacy link if needed */}
           <div className="flex gap-6 font-circular-web text-xs text-blue-50/40">
-            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-blue-50 transition-colors">Privacy Policy</a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-blue-50 transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
