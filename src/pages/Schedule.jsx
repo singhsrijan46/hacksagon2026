@@ -103,6 +103,9 @@ const Schedule = () => {
                 },
             });
         });
+
+        // Force refresh to ensure start positions are correct
+        ScrollTrigger.refresh();
     }, []);
 
     return (

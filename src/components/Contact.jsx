@@ -8,13 +8,13 @@ const contactPersons = [
         name: "Daksha Mehta",
         position: "Vice Chairperson",
         email: "mehtadaksha015@gmail.com",
-        image: "https://ui-avatars.com/api/?name=Daksha+Mehta&background=random&color=fff"
+        image: "https://i.postimg.cc/cJwgqVjd/Whats-App-Image-2026-01-15-at-10-32-36-PM.jpg"
     },
     {
         name: "Saksham Hans",
         position: "Vice Secretary",
         email: "bcs_2024060@iiitm.ac.in",
-        image: "https://ui-avatars.com/api/?name=Saksham+Hans&background=random&color=fff"
+        image: "https://i.postimg.cc/cJcP6JtK/1724094118414.jpg"
     },
     {
         name: "Shivansh Katiyar",
@@ -62,7 +62,7 @@ const socialLinks = [
 const Contact = () => {
     return (
         <div id="contact" className="my-6 md:my-10 min-h-96 w-full px-4 md:px-10">
-            <div className="relative rounded-lg bg-[#060010] py-10 text-blue-50 sm:overflow-hidden border border-white/10">
+            <div className="relative rounded-lg bg-[#060010] py-10 text-white sm:overflow-hidden border border-white/10">
 
                 <div className="flex flex-col lg:flex-row items-stretch justify-between px-6 md:px-10 gap-8">
 
@@ -73,7 +73,7 @@ const Contact = () => {
                             <h3 className="special-font font-zentry text-3xl md:text-5xl font-black uppercase leading-[.9]">
                                 Reach <b>U</b>s
                             </h3>
-                            <p className="font-circular-web text-base md:text-lg text-blue-50/70 leading-relaxed">
+                            <p className="font-circular-web text-base md:text-lg text-white/70 leading-relaxed">
                                 ABV-Indian Institute of Information Technology and Management,<br />
                                 Morena Link Road, Gwalior,<br />
                                 Madhya Pradesh 474015, India.
@@ -84,14 +84,14 @@ const Contact = () => {
                         <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                             <a
                                 href="mailto:ieeestudentbranch@iiitm.ac.in"
-                                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
+                                className="group relative cursor-pointer overflow-hidden rounded-full bg-white text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
                             >
                                 <FaEnvelope /> Mail Us
                             </a>
 
 
                             <button
-                                className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
+                                className="group relative cursor-pointer overflow-hidden rounded-full bg-white text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
                                 onClick={() => window.open('https://www.google.com/maps?q=ABV-Indian+Institute+of+Information+Technology+and+Management,+Morena+Link+Road,+Gwalior,+Madhya+Pradesh+474015,+India', '_blank')}
                             >
                                 <FaLocationArrow className="group-hover:rotate-45 transition-transform" /> Get Directions
@@ -140,12 +140,12 @@ const Contact = () => {
                                                 <h4 className="font-general text-xl md:text-3xl font-bold text-white leading-tight">
                                                     {person.name}
                                                 </h4>
-                                                <p className="font-circular-web text-sm md:text-lg text-blue-50/60 font-light">
+                                                <p className="font-circular-web text-sm md:text-lg text-white/60 font-light">
                                                     {person.position}
                                                 </p>
                                             </div>
                                             <div className="flex items-center gap-2">
-                                                <p className="font-circular-web text-xs md:text-base text-blue-50/80">
+                                                <p className="font-circular-web text-xs md:text-base text-white/80">
                                                     {person.email}
                                                 </p>
                                                 <a
@@ -167,10 +167,10 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="relative rounded-lg bg-[#060010] py-10 text-blue-50 sm:overflow-hidden border border-white/10 mt-6">
+            <div className="relative rounded-lg bg-[#060010] py-10 text-white sm:overflow-hidden border border-white/10 mt-6">
                 <div className="px-6 md:px-10">
                     <div className="mb-8 text-center">
-                        <h3 className="special-font font-zentry text-3xl md:text-5xl font-black uppercase leading-[.9] text-blue-50">
+                        <h3 className="special-font font-zentry text-3xl md:text-5xl font-black uppercase leading-[.9] text-white">
                             Our Social <b>A</b>ccounts!
                         </h3>
                     </div>
