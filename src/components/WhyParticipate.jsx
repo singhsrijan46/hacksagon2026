@@ -66,14 +66,14 @@ const WhyParticipate = () => {
     return (
         <div className={`-mt-32 md:-mt-12 bg-black-100 rounded-[20px]`}>
             <div
-                className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[250px] md:min-h-[400px] flex flex-col items-center justify-center gap-1`}
+                className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[150px] md:min-h-[400px] flex flex-col items-center justify-center gap-1`}
             >
                 <h2 className="text-white font-zentry font-black text-5xl leading-[0.9] sm:text-5xl md:text-[5rem] uppercase md:leading-[0.87] mt-5 text-center px-4 sm:px-8 md:px-32">
                     Why Participate?
                 </h2>
             </div>
 
-            <div className={`-mt-8 md:-mt-20 pb-14 ${styles.paddingX} flex flex-col items-center`}>
+            <div className={`mt-2 md:-mt-20 pb-14 ${styles.paddingX} flex flex-col items-center`}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl">
                     {reasons.map((card, index) => (
                         <SpotlightCard key={index} className="w-full min-h-[300px] md:min-h-[320px] !bg-[#2d1b4e]/40 backdrop-blur-md !border-white/10 flex flex-col justify-between" spotlightColor="rgba(255, 255, 255, 0.1)">

@@ -81,8 +81,8 @@ const Rewards = () => {
                     blurStrength={10}
                     containerClassName="mt-5 text-center px-4 sm:px-8 md:px-32"
                     textClassName="text-white font-zentry font-black !text-6xl !leading-[0.9] sm:!text-6xl md:!text-[6rem] uppercase md:!leading-[0.87]"
-                    rotationEnd="center center"
-                    wordAnimationEnd="center center"
+                    rotationEnd="bottom 60%"
+                    wordAnimationEnd="bottom 60%"
                 >
                     {"Play for a prize pool <br /> of ₹2,50,000"}
                 </ScrollReveal>

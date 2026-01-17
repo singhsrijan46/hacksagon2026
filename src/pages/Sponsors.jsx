@@ -137,7 +137,7 @@ const Sponsors = () => {
                         className="group relative cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-black transition-all hover:bg-[#5542ff] hover:text-white"
                     >
                         <span className="flex items-center gap-2 font-general font-bold uppercase text-xs md:text-sm">
-                            Download Brochure <TiLocationArrow className="text-lg group-hover:rotate-45 transition-transform" />
+                            Download Sponsorship Brochure <TiLocationArrow className="text-lg group-hover:rotate-45 transition-transform" />
                         </span>
                     </a>
 
@@ -161,7 +161,7 @@ const Sponsors = () => {
 
             {/* Pricing Section */}
             <div className="container mx-auto px-8 md:px-24 mb-20 md:mb-40">
-                <TitleHeader title="Sponsors Pricing" sub="" />
+                <TitleHeader title="Sponsorship Tiers" sub="" />
 
                 <div className="flex flex-wrap justify-center gap-12 mt-12 md:mt-20">
                     {pricingPackages.map((pkg, index) => (

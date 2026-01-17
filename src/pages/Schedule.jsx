@@ -39,13 +39,13 @@ const scheduleData = [
         description: "Final registration for the prototype round.",
         icon: <FaFlag className="text-4xl text-orange-400" />,
         subEvents: [
-            { label: "Form Release for Registration", date: "Feb 16th (Tentative)", detail: "Teams who have secured place in final round have to fill the form." },
-            { label: "Form Closing Date", date: "Feb 28th (Tentative)", detail: "Last date to submit." }
+            { label: "Form Release for Registration", date: "Feb 16th", detail: "Teams who have secured place in final round have to fill the form." },
+            { label: "Form Closing Date", date: "March 15th", detail: "Last date to submit." }
         ]
     },
     {
         id: 6,
-        title: "Phase 2.2: Prototype Round at IIITM",
+        title: "Phase 2.2: Prototype Round at ABV-IIITM Gwalior",
         date: "27-29th March 2025",
         description: "The main hackathon event where teams build their prototypes.",
         icon: <FaCode className="text-4xl text-green-400" />,
@@ -117,7 +117,7 @@ const Schedule = () => {
             <div className="container mx-auto px-4 md:px-20">
                 <TitleHeader
                     title="Event Schedule"
-                    description="From registration to incubation, embark on a 5-month journey of innovation and growth"
+                    description="From registration to incubation, embark on a 5-month journey of innovation and growth (Dates are tentative)"
                 />
 
                 <div className="mt-12 md:mt-20 relative">
