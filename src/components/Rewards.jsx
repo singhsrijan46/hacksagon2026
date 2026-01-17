@@ -15,7 +15,7 @@ import MagicBento from "./reactbits/MagicBento";
 const rewards = [
     {
         title: "Exclusive T-Shirts",
-        description: "Get exclusive event T-shirts for the all Round 3 qualifiers.",
+        description: "Get exclusive event T-shirts for the all Final round qualifiers.",
         icon: FaTshirt,
         iconColor: "text-blue-400",
         label: "Merchandise",
@@ -39,10 +39,10 @@ const rewards = [
     },
     {
         title: "Winner Medals",
-        description: "Your Chance to Score Cool Gadgets!",
+        description: "Your Chance to Score Cool Awards!",
         icon: FaHeadphones,
         iconColor: "text-purple-400",
-        label: "Gadgets",
+        label: "Awards",
         color: "#170c26"
     },
 ];

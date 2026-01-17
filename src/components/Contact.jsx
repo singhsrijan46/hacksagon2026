@@ -13,8 +13,8 @@ const contactPersons = [
     {
         name: "Saksham Hans",
         position: "Vice Secretary",
-        email: "bcs_2024060@iiitm.ac.in",
-        image: "https://i.postimg.cc/cJcP6JtK/1724094118414.jpg"
+        email: "sakshamhans51@gmail.com",
+        image: "https://i.postimg.cc/jqkjFg1b/Whats-App-Image-2026-01-16-at-10-33-41-AM.jpg"
     },
     {
         name: "Shivansh Katiyar",
