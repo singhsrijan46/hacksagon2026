@@ -106,7 +106,7 @@ const Hero = () => {
                                         In Competition
                                     </p>
                                     <h2 className="special-font font-zentry text-2xl md:text-5xl font-black text-white uppercase leading-none whitespace-nowrap">
-                                        300 Teams
+                                        700 Teams
                                     </h2>
                                 </div>
                             </MagicCard>

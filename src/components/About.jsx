@@ -95,7 +95,7 @@ const About = () => {
           </p>
           <br />
           <p>
-            Building upon this legacy, HACKSAGON 2025 marked a significant milestone in the journey of the hackathon. Spanning from January to June 2025 and conducted across three rigorous stages, the event witnessed 2600+ registrations, with over 550 individuals, forming 180+ teams, qualifying for the offline grand finals. Participants ideated, prototyped, and delivered impactful solutions to real-world challenges, competing for a cash prize pool of ₹2,50,000, along with additional rewards and opportunities.
+            Building upon this legacy, HACKSAGON 2025 marked a significant milestone in the journey of the hackathon. Spanning from January to June 2025 and conducted across three rigorous stages, the event witnessed 2700+ registrations, with over 600+ individuals, forming 150+ teams, qualifying for the offline grand finals. Participants ideated, prototyped, and delivered impactful solutions to real-world challenges, competing for a cash prize pool of ₹2,50,000, along with additional rewards and opportunities.
           </p>
           <br />
           <p>

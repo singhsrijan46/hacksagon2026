@@ -120,6 +120,45 @@ const currentSponsors = [
 const Sponsors = () => {
     return (
         <div className="bg-[#060010] min-h-screen pt-28 md:pt-32">
+            {/* Brochure Content Section */}
+            <div className="container mx-auto px-4 md:px-10 relative z-10 flex flex-col items-center text-center mb-20 md:mb-40">
+                <h1 className="font-zentry text-5xl md:text-7xl mb-8 uppercase text-white">
+                    Sponsorship Brochure
+                </h1>
+
+                <p className="font-general text-lg md:text-xl text-blue-50/70 max-w-2xl mb-12">
+                    Collaborate with us to empower the next generation of innovators. Download our sponsorship brochure to explore packages, benefits, and how you can support Hacksagon 2026.
+                </p>
+
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+                    <a
+                        href="/img/Sponshorship 2026 Hacksagon.svg"
+                        download="Hacksagon_Brochure_2026.svg"
+                        className="group relative cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-black transition-all hover:bg-[#5542ff] hover:text-white"
+                    >
+                        <span className="flex items-center gap-2 font-general font-bold uppercase text-xs md:text-sm">
+                            Download Brochure <TiLocationArrow className="text-lg group-hover:rotate-45 transition-transform" />
+                        </span>
+                    </a>
+
+
+                </div>
+
+                <div className="mt-20 w-full max-w-4xl p-4 bg-[#1a0b2e]/50 border border-neutral-800/50 rounded-xl backdrop-blur-sm">
+                    {/* Preview Placeholder */}
+                    <div className="aspect-[16/9] w-full bg-black/50 rounded-lg overflow-hidden flex items-center justify-center relative group">
+                        <img
+                            src="/img/Sponshorship 2026 Hacksagon.svg"
+                            alt="Brochure Preview"
+                            className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <span className="bg-black/70 text-white px-4 py-2 rounded-full font-general text-sm">Preview</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* Pricing Section */}
             <div className="container mx-auto px-8 md:px-24 mb-20 md:mb-40">
                 <TitleHeader title="Sponsors Pricing" sub="" />
@@ -201,17 +240,7 @@ const Sponsors = () => {
                     ))}
                 </div>
 
-                <div className="flex justify-center mt-12 mb-8">
-                    <a
-                        href="/img/Sponshorship 2026 Hacksagon.svg"
-                        download="Hacksagon_Brochure_2026.svg"
-                        className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 px-6 py-3 text-black transition-all hover:bg-[#5542ff] hover:text-white"
-                    >
-                        <span className="flex items-center gap-2 font-general font-bold uppercase text-xs md:text-sm">
-                            Download Sponsorship Brochure <TiLocationArrow className="text-lg group-hover:rotate-45 transition-transform" />
-                        </span>
-                    </a>
-                </div>
+
             </div>
         </div>
     );

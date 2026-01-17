@@ -17,8 +17,8 @@ const scheduleData = [
         description: "Begin your journey by registering and forming your team with peers. Submit your project idea in PDF/PPT format given by organising team.",
         icon: <FaClipboardList className="text-4xl text-blue-400" />,
         subEvents: [
-            { label: "Registration Opens", date: "Jan 15th", detail: "Registration opens for individuals and cross-university teams" },
-            { label: "Registration Deadline", date: "Jan 30th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
+            { label: "Registration Opens", date: "Jan 18th", detail: "Registration opens for individuals and cross-university teams" },
+            { label: "Registration Deadline", date: "Feb 9th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
         ]
     },
     {
@@ -28,8 +28,8 @@ const scheduleData = [
         description: "Evaluation of submitted ideas and announcement of shortlisted teams.",
         icon: <FaLightbulb className="text-4xl text-yellow-400" />,
         subEvents: [
-            { label: "Format Checking & Relevancy", date: "Jan 31th - Feb 8th", detail: "Evaluation of sent PPT/PDF files" },
-            { label: "Announcement of Result", date: "Feb 10th", detail: "Leaders will receive mails of their team getting selected" }
+            { label: "Format Checking & Relevancy", date: "Feb 10th - Feb 15th", detail: "Evaluation of sent PPT/PDF files" },
+            { label: "Announcement of Result", date: "Feb 16th", detail: "Leaders will receive mails of their team getting selected" }
         ]
     },
     {
@@ -39,7 +39,7 @@ const scheduleData = [
         description: "Final registration for the prototype round.",
         icon: <FaFlag className="text-4xl text-orange-400" />,
         subEvents: [
-            { label: "Form Release for Registration", date: "Feb 11th (Tentative)", detail: "Teams who have secured place in final round have to fill the form." },
+            { label: "Form Release for Registration", date: "Feb 16th (Tentative)", detail: "Teams who have secured place in final round have to fill the form." },
             { label: "Form Closing Date", date: "Feb 28th (Tentative)", detail: "Last date to submit." }
         ]
     },
@@ -50,7 +50,7 @@ const scheduleData = [
         description: "The main hackathon event where teams build their prototypes.",
         icon: <FaCode className="text-4xl text-green-400" />,
         subEvents: [
-            { label: "36hr Hackathon Sprint", date: "Mar 27th - 29th", detail: "Teams will come and work on their projects getting it ready for final presentation" }
+            { label: "36hr Hackathon Sprint", date: "April 3rd - 5th", detail: "Teams will come and work on their projects getting it ready for final presentation" }
         ]
     },
     {
@@ -60,14 +60,18 @@ const scheduleData = [
         description: "Declaration of winners and prize distribution.",
         icon: <FaAward className="text-4xl text-gold-400" />,
         subEvents: [
-            { label: "Release of final Results", date: "29th March 2026", detail: "Release of final Results and Distribution of Prizes" }
+            { label: "Release of final Results", date: "5th April 2026", detail: "Release of final Results and Distribution of Prizes" }
         ]
     }
 ];
 
 const Schedule = () => {
+    const containerRef = useRef(null);
+
     useGSAP(() => {
-        gsap.utils.toArray(".timeline-card").forEach((card) => {
+        const cards = gsap.utils.toArray(".timeline-card");
+
+        cards.forEach((card) => {
             gsap.from(card, {
                 xPercent: -50,
                 opacity: 0,
@@ -91,7 +95,9 @@ const Schedule = () => {
                 scrub: 0.5,
             },
         });
-        gsap.utils.toArray(".expText").forEach((text) => {
+
+        const texts = gsap.utils.toArray(".expText");
+        texts.forEach((text) => {
             gsap.from(text, {
                 opacity: 0,
                 x: 50,
@@ -104,12 +110,10 @@ const Schedule = () => {
             });
         });
 
-        // Force refresh to ensure start positions are correct
-        ScrollTrigger.refresh();
-    }, []);
+    }, { scope: containerRef });
 
     return (
-        <section id="schedule" className="pt-28 md:pt-32 pb-20 bg-[#060010] text-white relative">
+        <section ref={containerRef} id="schedule" className="pt-28 md:pt-32 pb-20 bg-[#060010] text-white relative">
             <div className="container mx-auto px-4 md:px-20">
                 <TitleHeader
                     title="Event Schedule"

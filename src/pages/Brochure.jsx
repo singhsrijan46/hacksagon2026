@@ -36,16 +36,7 @@ const Brochure = () => {
                         </span>
                     </a>
 
-                    <a
-                        href="/img/Sponshorship 2026 Hacksagon.svg"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative cursor-pointer overflow-hidden rounded-full border border-blue-50/30 px-6 py-3 text-white transition-all hover:bg-white/10"
-                    >
-                        <span className="flex items-center gap-2 font-general font-bold uppercase text-xs md:text-sm">
-                            View Online
-                        </span>
-                    </a>
+
                 </div>
 
                 <div
