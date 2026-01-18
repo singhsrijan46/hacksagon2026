@@ -2,7 +2,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaClipboardList, FaLightbulb, FaUsers, FaRocket, FaFlag, FaCode, FaAward } from "react-icons/fa";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import TitleHeader from "../components/TitleHeader";
 import GlowCard from "../components/reactbits/GlowCard";
@@ -67,20 +68,39 @@ const scheduleData = [
 
 const Schedule = () => {
     const containerRef = useRef(null);
+    const location = useLocation();
+
+    // Refresh ScrollTrigger on mount and after navigation
+    useEffect(() => {
+        // Small delay to ensure DOM is fully rendered
+        const timeoutId = setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 100);
+
+        return () => {
+            clearTimeout(timeoutId);
+        };
+    }, [location.pathname]);
 
     useGSAP(() => {
         const cards = gsap.utils.toArray(".timeline-card");
 
         cards.forEach((card) => {
-            gsap.from(card, {
-                xPercent: -50,
-                opacity: 0,
+            // Set initial state explicitly
+            gsap.set(card, { xPercent: -50, opacity: 0 });
+            
+            const cardAnimation = gsap.to(card, {
+                xPercent: 0,
+                opacity: 1,
                 transformOrigin: "left center",
                 duration: 1,
                 ease: "power2.inOut",
                 scrollTrigger: {
                     trigger: card,
                     start: "top 85%",
+                    end: "bottom 15%",
+                    toggleActions: "play none none reverse",
+                    invalidateOnRefresh: true,
                 },
             });
         });
@@ -98,17 +118,59 @@ const Schedule = () => {
 
         const texts = gsap.utils.toArray(".expText");
         texts.forEach((text) => {
-            gsap.from(text, {
-                opacity: 0,
-                x: 50,
+            // Set initial state explicitly
+            gsap.set(text, { opacity: 0, x: 50 });
+            
+            gsap.to(text, {
+                opacity: 1,
+                x: 0,
                 duration: 1,
                 ease: "power2.inOut",
                 scrollTrigger: {
                     trigger: text,
                     start: "top 85%",
+                    end: "bottom 15%",
+                    toggleActions: "play none none reverse",
+                    invalidateOnRefresh: true,
                 },
             });
         });
+
+        // Refresh ScrollTrigger after DOM is fully laid out
+        // This is critical for client-side navigation
+        const refreshTimeout = setTimeout(() => {
+            ScrollTrigger.refresh();
+            
+            // After refresh, manually check if any elements are already in viewport
+            // and trigger their animations if needed
+            requestAnimationFrame(() => {
+                const allTriggers = ScrollTrigger.getAll();
+                allTriggers.forEach(trigger => {
+                    try {
+                        const element = trigger.trigger || (trigger.vars && trigger.vars.trigger);
+                        if (element instanceof Element) {
+                            const rect = element.getBoundingClientRect();
+                            const windowHeight = window.innerHeight || window.outerHeight;
+                            const threshold = windowHeight * 0.85;
+                            
+                            // If element is already past the trigger point (in viewport)
+                            if (rect.top < threshold && rect.bottom > 0) {
+                                const animation = trigger.animation;
+                                if (animation && typeof animation.play === 'function' && animation.progress() < 0.01) {
+                                    animation.play(0);
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        // Silently ignore errors for triggers we can't access
+                    }
+                });
+            });
+        }, 200);
+
+        return () => {
+            clearTimeout(refreshTimeout);
+        };
 
     }, { scope: containerRef });
 
@@ -117,7 +179,7 @@ const Schedule = () => {
             <div className="container mx-auto px-4 md:px-20">
                 <TitleHeader
                     title="Event Schedule"
-                    description="From registration to incubation, embark on a 5-month journey of innovation and growth (Dates are tentative)"
+                    description="From registration to incubation, embark on an exciting journey of innovation and growth (Dates are tentative)"
                 />
 
                 <div className="mt-12 md:mt-20 relative">
