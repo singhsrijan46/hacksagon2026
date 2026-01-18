@@ -183,6 +183,17 @@ body {
   left: 0;
   transform: rotate(60deg);
   transform-origin: 50% 85%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Landscape Blocker Logic */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .landscape-blocker {
+    display: flex !important;
+  }
 }
 
 .three-body__dot:nth-child(1)::after {
