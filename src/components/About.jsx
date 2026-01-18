@@ -12,7 +12,7 @@ const About = () => {
       scrollTrigger: {
         trigger: "#clip",
         start: "center center",
-        end: "+=800 center",
+        end: "+=1200 center",
         scrub: 0.5,
         pin: true,
         pinSpacing: true,
@@ -21,7 +21,7 @@ const About = () => {
 
     clipAnimation.to(".mask-clip-path", {
       width: "100vw",
-      height: "100dvh",
+      height: "100vh",
       borderRadius: 0,
     });
 
