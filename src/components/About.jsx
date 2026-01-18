@@ -11,8 +11,8 @@ const About = () => {
     const clipAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: "#clip",
-        start: "center center",
-        end: "+=1200 center",
+        start: "top top",
+        end: "+=800 center",
         scrub: 0.5,
         pin: true,
         pinSpacing: true,
@@ -21,7 +21,7 @@ const About = () => {
 
     clipAnimation.to(".mask-clip-path", {
       width: "100vw",
-      height: "100vh",
+      height: "100dvh",
       borderRadius: 0,
     });
 
