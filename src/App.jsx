@@ -11,6 +11,7 @@ import Brochure from "./pages/Brochure";
 import Contact from "./pages/Contact";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
+import LandscapeBlocker from "./components/LandscapeBlocker";
 
 function App() {
   const { pathname, hash } = useLocation();
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <main className="relative min-h-screen w-screen overflow-x-hidden">
+      <LandscapeBlocker />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
