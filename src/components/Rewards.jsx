@@ -71,7 +71,7 @@ const Rewards = () => {
             <div
                 className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[200px] md:min-h-[300px] flex flex-col items-center justify-center gap-1`}
             >
-                <p className="rewards-subtitle font-general text-sm uppercase md:text-[10px] opacity-0 translate-y-10 leading-[0.85] text-white">
+                <p className="rewards-subtitle font-general text-sm uppercase md:text-xl opacity-0 translate-y-10 leading-[0.85] text-white">
                     Big Rewards Await
                 </p>
                 <ScrollReveal

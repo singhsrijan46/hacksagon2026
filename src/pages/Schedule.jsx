@@ -71,14 +71,32 @@ const Schedule = () => {
     const location = useLocation();
 
     // Refresh ScrollTrigger on mount and after navigation
+    // Refresh ScrollTrigger on mount, navigation, and resize
     useEffect(() => {
-        // Small delay to ensure DOM is fully rendered
-        const timeoutId = setTimeout(() => {
+        let resizeTimeout;
+
+        const handleResize = () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                ScrollTrigger.refresh();
+            }, 200); // Debounce refresh
+        };
+
+        const resizeObserver = new ResizeObserver(handleResize);
+
+        if (containerRef.current) {
+            resizeObserver.observe(containerRef.current);
+        }
+
+        // Initial refresh with a safe delay
+        const initialTimeout = setTimeout(() => {
             ScrollTrigger.refresh();
-        }, 100);
+        }, 500);
 
         return () => {
-            clearTimeout(timeoutId);
+            clearTimeout(resizeTimeout);
+            clearTimeout(initialTimeout);
+            resizeObserver.disconnect();
         };
     }, [location.pathname]);
 

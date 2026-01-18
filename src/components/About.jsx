@@ -53,7 +53,7 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-2 md:mb-8 mt-16 md:mt-32 flex flex-col items-center gap-1">
-        <p className="welcome-text font-general text-sm uppercase md:text-[10px] text-white opacity-0 translate-y-10 leading-[0.85]">
+        <p className="welcome-text font-general text-sm uppercase md:text-xl text-white opacity-0 translate-y-10 leading-[0.85]">
           Welcome to Hacksagon
         </p>
 
