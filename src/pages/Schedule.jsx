@@ -18,8 +18,8 @@ const scheduleData = [
         description: "Begin your journey by registering and forming your team with peers. Submit your project idea in PDF/PPT format given by organising team.",
         icon: <FaClipboardList className="text-4xl text-blue-400" />,
         subEvents: [
-            { label: "Registration Opens", date: "Jan 18th", detail: "Registration opens for individuals and cross-university teams" },
-            { label: "Registration Deadline", date: "Feb 9th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
+            { label: "Registration Opens", date: "Jan 19th", detail: "Registration opens for individuals and cross-university teams" },
+            { label: "Registration Deadline", date: "Feb 5th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
         ]
     },
     {
@@ -29,8 +29,8 @@ const scheduleData = [
         description: "Evaluation of submitted ideas and announcement of shortlisted teams.",
         icon: <FaLightbulb className="text-4xl text-yellow-400" />,
         subEvents: [
-            { label: "Format Checking & Relevancy", date: "Feb 10th - Feb 15th", detail: "Evaluation of sent PPT/PDF files" },
-            { label: "Announcement of Result", date: "Feb 16th", detail: "Leaders will receive mails of their team getting selected" }
+            { label: "Format Checking & Relevancy", date: "Feb 6th - Feb 11th", detail: "Evaluation of sent PPT/PDF files" },
+            { label: "Announcement of Result", date: "Feb 12th", detail: "Leaders will receive mails of their team getting selected" }
         ]
     },
     {
@@ -40,7 +40,7 @@ const scheduleData = [
         description: "Final registration for the prototype round.",
         icon: <FaFlag className="text-4xl text-orange-400" />,
         subEvents: [
-            { label: "Form Release for Registration", date: "Feb 16th", detail: "Teams who have secured place in final round have to fill the form." },
+            { label: "Form Release for Registration", date: "Feb 15th", detail: "Teams who have secured place in final round have to fill the form." },
             { label: "Form Closing Date", date: "March 15th", detail: "Last date to submit." }
         ]
     },
@@ -88,7 +88,7 @@ const Schedule = () => {
         cards.forEach((card) => {
             // Set initial state explicitly
             gsap.set(card, { xPercent: -50, opacity: 0 });
-            
+
             const cardAnimation = gsap.to(card, {
                 xPercent: 0,
                 opacity: 1,
@@ -120,7 +120,7 @@ const Schedule = () => {
         texts.forEach((text) => {
             // Set initial state explicitly
             gsap.set(text, { opacity: 0, x: 50 });
-            
+
             gsap.to(text, {
                 opacity: 1,
                 x: 0,
@@ -140,7 +140,7 @@ const Schedule = () => {
         // This is critical for client-side navigation
         const refreshTimeout = setTimeout(() => {
             ScrollTrigger.refresh();
-            
+
             // After refresh, manually check if any elements are already in viewport
             // and trigger their animations if needed
             requestAnimationFrame(() => {
@@ -152,7 +152,7 @@ const Schedule = () => {
                             const rect = element.getBoundingClientRect();
                             const windowHeight = window.innerHeight || window.outerHeight;
                             const threshold = windowHeight * 0.85;
-                            
+
                             // If element is already past the trigger point (in viewport)
                             if (rect.top < threshold && rect.bottom > 0) {
                                 const animation = trigger.animation;
