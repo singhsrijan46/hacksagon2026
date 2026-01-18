@@ -19,7 +19,7 @@ const Schedule = () => {
   return (
     <div id="story" className="md:min-h-dvh w-screen bg-[#060010] text-blue-50 pb-32 md:pb-0">
       <div className="flex size-full flex-col items-center pt-0 pb-0 md:pt-16 md:pb-0">
-        <p className="story-subtitle font-general text-sm uppercase md:text-[10px] leading-[0.85]">
+        <p className="story-subtitle font-general text-sm uppercase md:text-xl leading-[0.85]">
           HACKSAGON EVENT SCHEDULE
         </p>
 
