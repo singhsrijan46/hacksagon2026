@@ -72,7 +72,17 @@ const Schedule = () => {
 
     // Refresh ScrollTrigger on mount and after navigation
     // Refresh ScrollTrigger on mount, navigation, and resize
+    // Refresh ScrollTrigger on mount, navigation, and resize
     useEffect(() => {
+        // Auto-refresh logic to ensure correct rendering on Vercel
+        const hasRefreshed = sessionStorage.getItem("schedule_refreshed");
+
+        if (!hasRefreshed) {
+            sessionStorage.setItem("schedule_refreshed", "true");
+            window.location.reload();
+            return; // Stop execution to let reload happen
+        }
+
         let resizeTimeout;
 
         const handleResize = () => {
@@ -97,6 +107,8 @@ const Schedule = () => {
             clearTimeout(resizeTimeout);
             clearTimeout(initialTimeout);
             resizeObserver.disconnect();
+            // Reset refresh flag on unmount to allow refresh on next visit
+            sessionStorage.removeItem("schedule_refreshed");
         };
     }, [location.pathname]);
 
