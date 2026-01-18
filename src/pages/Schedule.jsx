@@ -117,7 +117,7 @@ const Schedule = () => {
                     trigger: card,
                     start: "top 85%",
                     end: "bottom 15%",
-                    toggleActions: "play none none reverse",
+                    toggleActions: "play none none none",
                     invalidateOnRefresh: true,
                 },
             });
@@ -148,7 +148,7 @@ const Schedule = () => {
                     trigger: text,
                     start: "top 85%",
                     end: "bottom 15%",
-                    toggleActions: "play none none reverse",
+                    toggleActions: "play none none none",
                     invalidateOnRefresh: true,
                 },
             });
