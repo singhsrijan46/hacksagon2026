@@ -85,7 +85,7 @@ const Schedule = () => {
     useGSAP(() => {
         const cards = gsap.utils.toArray(".timeline-card");
 
-        cards.forEach((card) => {
+        cards.forEach((card, index) => {
             // Set initial state explicitly
             gsap.set(card, { xPercent: -50, opacity: 0 });
 
@@ -95,7 +95,7 @@ const Schedule = () => {
                 transformOrigin: "left center",
                 duration: 1,
                 ease: "power2.inOut",
-                scrollTrigger: {
+                scrollTrigger: index === 0 ? null : {
                     trigger: card,
                     start: "top 85%",
                     end: "bottom 15%",
@@ -117,7 +117,7 @@ const Schedule = () => {
         });
 
         const texts = gsap.utils.toArray(".expText");
-        texts.forEach((text) => {
+        texts.forEach((text, index) => {
             // Set initial state explicitly
             gsap.set(text, { opacity: 0, x: 50 });
 
@@ -126,7 +126,7 @@ const Schedule = () => {
                 x: 0,
                 duration: 1,
                 ease: "power2.inOut",
-                scrollTrigger: {
+                scrollTrigger: index === 0 ? null : {
                     trigger: text,
                     start: "top 85%",
                     end: "bottom 15%",
