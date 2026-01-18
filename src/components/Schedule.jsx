@@ -47,9 +47,9 @@ const Schedule = () => {
           </div>
         </div>
 
-        <div className="mt-5 md:mt-10 flex w-full justify-center md:me-44 md:justify-end">
-          <div className="flex h-full w-fit flex-col items-center md:items-start">
-            <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
+        <div className="mt-5 md:mt-10 flex w-full justify-center md:justify-center">
+          <div className="flex h-full w-fit flex-col items-center md:items-center">
+            <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-center">
               Explore the full schedule and stay on track throughout the hackathon journey.
             </p>
 
