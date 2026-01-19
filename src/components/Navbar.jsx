@@ -117,7 +117,7 @@ const NavBar = () => {
               <button
                 id="register-button"
                 className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white flex items-center justify-center gap-1 px-7 py-3"
-                onClick={() => alert("Registration opens soon")}
+                onClick={() => window.open('https://unstop.com/p/hacksagon-2026-atal-bihari-vajpayee-indian-institute-of-information-technology-and-management-1626084', '_blank')}
               >
                 <span className="flex items-center gap-2 font-general uppercase text-xs">
                   Register <TiLocationArrow className="group-hover:rotate-45 transition-transform" />
@@ -133,7 +133,7 @@ const NavBar = () => {
               <button
                 id="register-button-mobile-nav"
                 className="group relative cursor-pointer overflow-hidden rounded-full bg-blue-50 text-black transition-all hover:bg-[#5542ff] hover:text-white flex items-center justify-center gap-1 !py-2 !px-3 text-xs"
-                onClick={() => alert("Registration opens soon")}
+                onClick={() => window.open('https://unstop.com/p/hacksagon-2026-atal-bihari-vajpayee-indian-institute-of-information-technology-and-management-1626084', '_blank')}
               >
                 <span className="flex items-center gap-2 font-general uppercase">
                   Register <TiLocationArrow className="group-hover:rotate-45 transition-transform" />
