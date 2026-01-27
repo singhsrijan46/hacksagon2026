@@ -9,6 +9,7 @@ import ThemesPage from "./pages/ThemesPage";
 import Rewards from "./pages/Rewards";
 import Brochure from "./pages/Brochure";
 import Contact from "./pages/Contact";
+
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LandscapeBlocker from "./components/LandscapeBlocker";
@@ -43,6 +44,7 @@ function App() {
         <Route path="/rewards" element={<Rewards />} />
         <Route path="/brochure" element={<Brochure />} />
         <Route path="/contact" element={<Contact />} />
+
       </Routes>
       <Footer />
     </main>
