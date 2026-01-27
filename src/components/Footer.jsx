@@ -51,6 +51,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-3 font-circular-web text-sm text-blue-50/60">
                 <li><a href="/brochure" className="hover:text-yellow-300 transition-colors duration-300">Brochure</a></li>
                 <li><a href="/contact" className="hover:text-yellow-300 transition-colors duration-300">Contact</a></li>
+
               </ul>
             </div>
           </div>
