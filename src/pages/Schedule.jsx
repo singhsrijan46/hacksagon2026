@@ -19,7 +19,7 @@ const scheduleData = [
         icon: <FaClipboardList className="text-4xl text-blue-400" />,
         subEvents: [
             { label: "Registration Opens", date: "Jan 19th", detail: "Registration opens for individuals and cross-university teams" },
-            { label: "Registration Deadline", date: "Feb 5th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
+            { label: "Registration Deadline", date: "Feb 13th", detail: "Last day to submit your project idea in PDF/PPT format given by organising team" }
         ]
     },
     {
@@ -29,8 +29,8 @@ const scheduleData = [
         description: "Evaluation of submitted ideas and announcement of shortlisted teams.",
         icon: <FaLightbulb className="text-4xl text-yellow-400" />,
         subEvents: [
-            { label: "Format Checking & Relevancy", date: "Feb 6th - Feb 11th", detail: "Evaluation of sent PPT/PDF files" },
-            { label: "Announcement of Result", date: "Feb 12th", detail: "Leaders will receive mails of their team getting selected" }
+            { label: "Format Checking & Relevancy", date: "Feb 14th - Feb 19th", detail: "Evaluation of sent PPT/PDF files" },
+            { label: "Announcement of Result", date: "Feb 20th", detail: "Leaders will receive mails of their team getting selected" }
         ]
     },
     {
@@ -40,7 +40,7 @@ const scheduleData = [
         description: "Final registration for the prototype round.",
         icon: <FaFlag className="text-4xl text-orange-400" />,
         subEvents: [
-            { label: "Form Release for Registration", date: "Feb 15th", detail: "Teams who have secured place in final round have to fill the form." },
+            { label: "Form Release for Registration", date: "Feb 21th", detail: "Teams who have secured place in final round have to fill the form." },
             { label: "Form Closing Date", date: "March 15th", detail: "Last date to submit." }
         ]
     },
@@ -74,15 +74,6 @@ const Schedule = () => {
     // Refresh ScrollTrigger on mount, navigation, and resize
     // Refresh ScrollTrigger on mount, navigation, and resize
     useEffect(() => {
-        // Auto-refresh logic to ensure correct rendering on Vercel
-        const hasRefreshed = sessionStorage.getItem("schedule_refreshed");
-
-        if (!hasRefreshed) {
-            sessionStorage.setItem("schedule_refreshed", "true");
-            window.location.reload();
-            return; // Stop execution to let reload happen
-        }
-
         let resizeTimeout;
 
         const handleResize = () => {
@@ -107,8 +98,6 @@ const Schedule = () => {
             clearTimeout(resizeTimeout);
             clearTimeout(initialTimeout);
             resizeObserver.disconnect();
-            // Reset refresh flag on unmount to allow refresh on next visit
-            sessionStorage.removeItem("schedule_refreshed");
         };
     }, [location.pathname]);
 
