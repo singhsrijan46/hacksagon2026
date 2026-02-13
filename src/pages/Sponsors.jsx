@@ -100,21 +100,9 @@ const pastSponsors = [
 
 const currentSponsors = [
     {
-        src: "https://i.postimg.cc/gjkT5CRN/Devfolio_Ddq0c_Kk_Q.png",
-        alt: "Devfolio",
+        src: "https://i.postimg.cc/3Nz7PbT8/UNSTOP-POST.jpg",
+        alt: "Unstop",
     },
-    {
-        src: "https://i.postimg.cc/VNqZNfWS/ETHIndia_C8o_Lc_e_A.png",
-        alt: "ETHIndia",
-    },
-    {
-        src: "https://i.postimg.cc/Qtj4926s/polygon_DFQ0UIh_A.png",
-        alt: "Polygon",
-    },
-    {
-        src: "https://i.postimg.cc/fTVH9jvy/xyz_8Kxg4t_YD.png",
-        alt: "XYZ",
-    }
 ];
 
 const Sponsors = () => {
@@ -132,7 +120,7 @@ const Sponsors = () => {
 
                 <div className="flex flex-col md:flex-row gap-6 items-center">
                     <a
-                        href="https://drive.google.com/file/d/1OVGj6eVR1gwqxcJeDJT2TZyPijUQ006z/view?usp=drivesdk"
+                        href="https://drive.google.com/file/d/19xKfibIeLEUxWbi2abcHB1Z5wlgWfCkN/view"
                         target="_blank"
                         rel="noreferrer"
                         className="group relative cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-black transition-all hover:bg-[#5542ff] hover:text-white"
@@ -191,7 +179,7 @@ const Sponsors = () => {
                 </div>
             </div>
 
-            {/* Current Sponsors Section
+            {/* Current Sponsors Section */}
             <div className="mb-20 md:mb-40">
                 <div className="container mx-auto px-4">
                     <TitleHeader title="Current Sponsors" sub="" />
@@ -210,7 +198,7 @@ const Sponsors = () => {
                     </div>
                 </div>
             </div>
-            */}
+
 
             {/* Past Sponsors Section */}
             <div className="container mx-auto px-8 md:px-24 pb-20">
