@@ -103,6 +103,14 @@ const currentSponsors = [
         src: "https://i.postimg.cc/3Nz7PbT8/UNSTOP-POST.jpg",
         alt: "Unstop",
     },
+    {
+        src: "https://i.postimg.cc/MZDdWd2t/Sublime-Text-Logo.png",
+        alt: "Sublime Text",
+    },
+    {
+        src: "https://i.postimg.cc/4dmP0Dwb/logon8n.jpg",
+        alt: "n8n",
+    },
 ];
 
 const Sponsors = () => {

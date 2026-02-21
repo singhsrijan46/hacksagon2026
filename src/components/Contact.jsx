@@ -82,12 +82,12 @@ const Contact = () => {
 
                         {/* General Contact Buttons */}
                         <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                            <a
+                            {/* <a
                                 href="mailto:ieeestudentbranch@iiitm.ac.in"
                                 className="group relative cursor-pointer overflow-hidden rounded-full bg-white text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2"
                             >
                                 <FaEnvelope /> Mail Us
-                            </a>
+                            </a> */}
 
 
                             <button
