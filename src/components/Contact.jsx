@@ -119,17 +119,22 @@ const Contact = () => {
                     <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start lg:pl-16 lg:border-l lg:border-t-0 border-t border-white/10 pt-10 lg:pt-0">
                         {/* Contact Persons Section */}
                         <div className="w-full flex-grow">
-                            <div className="mb-6 flex items-center justify-center md:justify-start gap-4 w-full">
+                            <div className="mb-6 flex flex-col items-center md:items-start gap-3 w-full">
                                 <h3 className="special-font font-zentry text-2xl md:text-4xl font-black uppercase leading-[.9]">
                                     Contact <b>P</b>ersons
                                 </h3>
-                                <a
-                                    href="mailto:shivanshk8.infi@gmail.com"
-                                    className="group relative cursor-pointer overflow-hidden rounded-full bg-white text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2 shrink-0"
-                                >
-                                    <FaEnvelope />
-                                    Mail Us
-                                </a>
+                                <div className="flex items-center gap-3">
+                                    <a
+                                        href="mailto:shivanshk8.infi@gmail.com"
+                                        className="group relative cursor-pointer overflow-hidden rounded-full bg-white text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2 shrink-0"
+                                    >
+                                        <FaEnvelope />
+                                        Mail Us
+                                    </a>
+                                    <p className="font-circular-web text-sm md:text-base text-white/60">
+                                        shivanshk8.infi@gmail.com
+                                    </p>
+                                </div>
                             </div>
 
                             <div className="flex flex-col gap-4 w-full">
