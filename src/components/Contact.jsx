@@ -119,10 +119,17 @@ const Contact = () => {
                     <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start lg:pl-16 lg:border-l lg:border-t-0 border-t border-white/10 pt-10 lg:pt-0">
                         {/* Contact Persons Section */}
                         <div className="w-full flex-grow">
-                            <div className="mb-6 text-center md:text-left w-full">
+                            <div className="mb-6 flex items-center justify-center md:justify-start gap-4 w-full">
                                 <h3 className="special-font font-zentry text-2xl md:text-4xl font-black uppercase leading-[.9]">
                                     Contact <b>P</b>ersons
                                 </h3>
+                                <a
+                                    href="mailto:shivanshk8.infi@gmail.com"
+                                    className="group relative cursor-pointer overflow-hidden rounded-full bg-white text-black transition-all hover:bg-[#5542ff] hover:text-white !px-5 !py-2 text-sm flex items-center gap-2 shrink-0"
+                                >
+                                    <FaEnvelope />
+                                    Mail Us
+                                </a>
                             </div>
 
                             <div className="flex flex-col gap-4 w-full">
@@ -144,22 +151,12 @@ const Contact = () => {
                                                     {person.position}
                                                 </p>
                                             </div>
-                                            <div className="flex items-center gap-2">
-                                                <p className="font-circular-web text-[10px] md:text-xs text-white/80">
-                                                    {person.email}
-                                                </p>
-                                                <a
-                                                    href={`mailto:${person.email}`}
-                                                    className="p-1.5 bg-white/10 text-white rounded-full hover:bg-[#5542ff] transition-colors flex items-center justify-center"
-                                                    title="Mail"
-                                                >
-                                                    <FaEnvelope size={10} />
-                                                </a>
-                                            </div>
+
                                         </div>
                                     </div>
                                 ))}
                             </div>
+
 
                         </div>
 
@@ -186,18 +183,7 @@ const Contact = () => {
                                                 Srijan Singh
                                             </h4>
                                         </div>
-                                        <div className="flex items-center gap-2">
-                                            <p className="font-circular-web text-[10px] md:text-xs text-white/80">
-                                                singhsrijangkp@gmail.com
-                                            </p>
-                                            <a
-                                                href="mailto:singhsrijangkp@gmail.com"
-                                                className="p-1.5 bg-white/10 text-white rounded-full hover:bg-[#5542ff] transition-colors flex items-center justify-center"
-                                                title="Mail"
-                                            >
-                                                <FaEnvelope size={10} />
-                                            </a>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
