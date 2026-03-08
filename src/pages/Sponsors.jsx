@@ -128,7 +128,7 @@ const Sponsors = () => {
 
                 <div className="flex flex-col md:flex-row gap-6 items-center">
                     <a
-                        href="https://drive.google.com/file/d/19xKfibIeLEUxWbi2abcHB1Z5wlgWfCkN/view"
+                        href=""
                         target="_blank"
                         rel="noreferrer"
                         className="group relative cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-black transition-all hover:bg-[#5542ff] hover:text-white"
