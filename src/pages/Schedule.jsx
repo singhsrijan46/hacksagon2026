@@ -41,7 +41,7 @@ const scheduleData = [
         icon: <FaFlag className="text-4xl text-orange-400" />,
         subEvents: [
             { label: "Form Release for Registration", date: "Feb 21th", detail: "Teams who have secured place in final round have to fill the form." },
-            { label: "Form Closing Date", date: "March 15th", detail: "Last date to submit." }
+            { label: "Form Closing Date", date: "March 8th", detail: "Last date to submit." }
         ]
     },
     {
