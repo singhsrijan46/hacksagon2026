@@ -1,4 +1,4 @@
-const TitleHeader = ({ title, sub, description }) => {
+const TitleHeader = ({ title, sub, description, titleClassName = "" }) => {
     return (
         <div className="flex flex-col items-center gap-5 mb-8 md:mb-10">
             {sub && (
@@ -7,7 +7,7 @@ const TitleHeader = ({ title, sub, description }) => {
                 </div>
             )}
             <div>
-                <h2 className="font-zentry text-5xl md:text-7xl uppercase text-center text-white">
+                <h2 className={`font-zentry text-5xl md:text-7xl uppercase text-center text-white ${titleClassName}`}>
                     {title}
                 </h2>
                 {description && (

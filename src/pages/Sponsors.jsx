@@ -100,16 +100,42 @@ const pastSponsors = [
 
 const currentSponsors = [
     {
+        src: "https://i.postimg.cc/4dmP0Dwb/logon8n.jpg",
+        alt: "n8n",
+    },
+    {
+        src: "https://i.postimg.cc/qBnYPKq2/true.png",
+        alt: "Appwrite",
+    },
+    {
+        src: "https://i.postimg.cc/hvTtxGSm/featherlessai-transparent.png",
+        alt: "Featherless AI",
+    },
+    {
+        src: "https://i.postimg.cc/cJvZwJmz/mobbin-logo-for-email-signature.png",
+        alt: "Mobbin",
+    },
+];
+
+const featuredSponsors = [
+    {
         src: "https://i.postimg.cc/3Nz7PbT8/UNSTOP-POST.jpg",
         alt: "Unstop",
+    },
+];
+
+const inKindSponsors = [
+    {
+        src: "https://i.postimg.cc/2yMSLZp0/Code-Crafters-io-full-logo-(Dark-text).png",
+        alt: "Code Crafters",
     },
     {
         src: "https://i.postimg.cc/MZDdWd2t/Sublime-Text-Logo.png",
         alt: "Sublime Text",
     },
     {
-        src: "https://i.postimg.cc/4dmP0Dwb/logon8n.jpg",
-        alt: "n8n",
+        src: "https://i.postimg.cc/fTVH9jvy/xyz-8Kxg4t-YD.png",
+        alt: ".xyz",
     },
 ];
 
@@ -193,6 +219,46 @@ const Sponsors = () => {
                     <TitleHeader title="Current Sponsors" sub="" />
                     <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                         {currentSponsors.map((sponsor, index) => (
+                            <div key={index} className="flex flex-col items-center gap-4">
+                                <div className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4">
+                                    <img
+                                        src={sponsor.src}
+                                        alt={sponsor.alt}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* In-kind Sponsors Section */}
+            <div className="mb-20 md:mb-40">
+                <div className="container mx-auto px-4">
+                    <TitleHeader title="In-kind Sponsors" sub="" titleClassName="text-4xl md:text-6xl" />
+                    <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                        {inKindSponsors.map((sponsor, index) => (
+                            <div key={index} className="flex flex-col items-center gap-4">
+                                <div className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4">
+                                    <img
+                                        src={sponsor.src}
+                                        alt={sponsor.alt}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Platform Partner Section */}
+            <div className="mb-20 md:mb-40">
+                <div className="container mx-auto px-4">
+                    <TitleHeader title="Platform Partner" sub="" titleClassName="text-4xl md:text-6xl" />
+                    <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                        {featuredSponsors.map((sponsor, index) => (
                             <div key={index} className="flex flex-col items-center gap-4">
                                 <div className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4">
                                     <img
