@@ -71,7 +71,7 @@ const Hero = () => {
             </div>
 
             {/* Powered By Box - Desktop */}
-            <div className="absolute z-20 top-20 right-0 md:top-28 hidden md:block">
+            {/* <div className="absolute z-20 top-20 right-0 md:top-28 hidden md:block">
                 <div className="flex flex-col items-center justify-center pt-4 px-4 pb-0 pr-6 w-auto h-auto bg-black/50 backdrop-blur-md border-y border-l border-white/10 rounded-l-xl rounded-r-none overflow-hidden">
                     <p className="relative z-10 font-circular-web text-[10px] text-blue-50/60 uppercase mb-0 leading-none tracking-wider">
                         platform partner
@@ -82,7 +82,7 @@ const Hero = () => {
                         className="relative z-0 h-32 w-auto object-contain rounded-sm -mt-8 -mb-4"
                     />
                 </div>
-            </div>
+            </div> */}
 
             <div className="relative z-10 pointer-events-auto mt-12 px-6 w-full flex justify-center md:absolute md:top-[55%] md:right-[10%] md:left-auto md:mt-0 md:block md:w-auto md:max-w-[90%] md:-translate-y-1/2">
                 <div className="flex flex-col gap-3 w-full items-center md:items-start">

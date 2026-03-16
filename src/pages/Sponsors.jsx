@@ -102,18 +102,22 @@ const currentSponsors = [
     {
         src: "https://i.postimg.cc/4dmP0Dwb/logon8n.jpg",
         alt: "n8n",
+        href: "https://n8n.io",
     },
     {
         src: "https://i.postimg.cc/qBnYPKq2/true.png",
         alt: "Appwrite",
+        href: "https://appwrite.io",
     },
     {
         src: "https://i.postimg.cc/hvTtxGSm/featherlessai-transparent.png",
         alt: "Featherless AI",
+        href: "https://featherless.ai",
     },
     {
         src: "https://i.postimg.cc/cJvZwJmz/mobbin-logo-for-email-signature.png",
         alt: "Mobbin",
+        href: "https://mobbin.com",
     },
 ];
 
@@ -121,6 +125,15 @@ const featuredSponsors = [
     {
         src: "https://i.postimg.cc/3Nz7PbT8/UNSTOP-POST.jpg",
         alt: "Unstop",
+        href: "https://unstop.com",
+    },
+];
+
+const hiringPartners = [
+    {
+        src: "https://i.postimg.cc/hvZxKMp6/the-agi-company-logo.jpg",
+        alt: "AGI Company",
+        href: "https://theagi.company",
     },
 ];
 
@@ -128,14 +141,17 @@ const inKindSponsors = [
     {
         src: "https://i.postimg.cc/2yMSLZp0/Code-Crafters-io-full-logo-(Dark-text).png",
         alt: "Code Crafters",
+        href: "https://codecrafters.io",
     },
     {
         src: "https://i.postimg.cc/MZDdWd2t/Sublime-Text-Logo.png",
         alt: "Sublime Text",
+        href: "https://www.sublimetext.com",
     },
     {
         src: "https://i.postimg.cc/fTVH9jvy/xyz-8Kxg4t-YD.png",
         alt: ".xyz",
+        href: "https://gen.xyz",
     },
 ];
 
@@ -154,7 +170,7 @@ const Sponsors = () => {
 
                 <div className="flex flex-col md:flex-row gap-6 items-center">
                     <a
-                        href=""
+                        href="https://drive.google.com/file/d/19xKfibIeLEUxWbi2abcHB1Z5wlgWfCkN/view"
                         target="_blank"
                         rel="noreferrer"
                         className="group relative cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-black transition-all hover:bg-[#5542ff] hover:text-white"
@@ -220,13 +236,13 @@ const Sponsors = () => {
                     <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                         {currentSponsors.map((sponsor, index) => (
                             <div key={index} className="flex flex-col items-center gap-4">
-                                <div className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4">
+                                <a href={sponsor.href} target="_blank" rel="noopener noreferrer" className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4 cursor-pointer hover:ring-2 hover:ring-purple-400 transition-all">
                                     <img
                                         src={sponsor.src}
                                         alt={sponsor.alt}
                                         className="w-full h-full object-contain"
                                     />
-                                </div>
+                                </a>
                             </div>
                         ))}
                     </div>
@@ -240,13 +256,13 @@ const Sponsors = () => {
                     <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                         {inKindSponsors.map((sponsor, index) => (
                             <div key={index} className="flex flex-col items-center gap-4">
-                                <div className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4">
+                                <a href={sponsor.href} target="_blank" rel="noopener noreferrer" className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4 cursor-pointer hover:ring-2 hover:ring-purple-400 transition-all">
                                     <img
                                         src={sponsor.src}
                                         alt={sponsor.alt}
                                         className="w-full h-full object-contain"
                                     />
-                                </div>
+                                </a>
                             </div>
                         ))}
                     </div>
@@ -260,19 +276,39 @@ const Sponsors = () => {
                     <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                         {featuredSponsors.map((sponsor, index) => (
                             <div key={index} className="flex flex-col items-center gap-4">
-                                <div className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4">
+                                <a href={sponsor.href} target="_blank" rel="noopener noreferrer" className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4 cursor-pointer hover:ring-2 hover:ring-purple-400 transition-all">
                                     <img
                                         src={sponsor.src}
                                         alt={sponsor.alt}
                                         className="w-full h-full object-contain"
                                     />
-                                </div>
+                                </a>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
 
+
+            {/* Hiring Partner Section */}
+            <div className="mb-20 md:mb-40">
+                <div className="container mx-auto px-4">
+                    <TitleHeader title="Hiring Partner" sub="" titleClassName="text-4xl md:text-6xl" />
+                    <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                        {hiringPartners.map((sponsor, index) => (
+                            <div key={index} className="flex flex-col items-center gap-4">
+                                <a href={sponsor.href} target="_blank" rel="noopener noreferrer" className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4 cursor-pointer hover:ring-2 hover:ring-purple-400 transition-all">
+                                    <img
+                                        src={sponsor.src}
+                                        alt={sponsor.alt}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             {/* Past Sponsors Section */}
             <div className="container mx-auto px-8 md:px-24 pb-20">
