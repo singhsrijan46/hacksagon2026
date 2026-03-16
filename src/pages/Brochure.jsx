@@ -27,7 +27,7 @@ const Brochure = () => {
                     className="flex flex-col md:flex-row gap-6 items-center"
                 >
                     <a
-                        href=""
+                        href="s://drive.google.com/uc?export=download&id=1KcnswVUjCV9mlPGB_YNLEVPu5VGOsPhn"
                         target="_blank"
                         rel="noreferrer"
                         className="group relative cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-black transition-all hover:bg-[#5542ff] hover:text-white"
@@ -43,7 +43,7 @@ const Brochure = () => {
 
                 <div className="mt-12 w-full max-w-5xl h-[500px] md:h-[800px] border-2 border-white/10 rounded-xl overflow-hidden shadow-2xl bg-black/50 backdrop-blur-sm">
                     <iframe
-                        src=""
+                        src="https://drive.google.com/file/d/1KcnswVUjCV9mlPGB_YNLEVPu5VGOsPhn/preview"
                         width="100%"
                         height="100%"
                         className="w-full h-full"
