@@ -119,6 +119,11 @@ const currentSponsors = [
         alt: "Mobbin",
         href: "https://mobbin.com",
     },
+    {
+        src: "https://i.postimg.cc/gd6jPykx/green-pt.png",
+        alt: "Green PT",
+        href: "https://greenpt.com",
+    },
 ];
 
 const featuredSponsors = [
@@ -131,7 +136,7 @@ const featuredSponsors = [
 
 const hiringPartners = [
     {
-        src: "https://i.postimg.cc/hvZxKMp6/the-agi-company-logo.jpg",
+        src: "https://i.postimg.cc/gcXb3Krk/spon-logo.jpg",
         alt: "AGI Company",
         href: "https://theagi.company",
     },
@@ -229,6 +234,26 @@ const Sponsors = () => {
                 </div>
             </div>
 
+            {/* Hiring Partner Section */}
+            <div className="mb-20 md:mb-40">
+                <div className="container mx-auto px-4">
+                    <TitleHeader title="Hiring Partner" sub="" titleClassName="text-4xl md:text-6xl" />
+                    <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                        {hiringPartners.map((sponsor, index) => (
+                            <div key={index} className="flex flex-col items-center gap-4">
+                                <a href={sponsor.href} target="_blank" rel="noopener noreferrer" className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4 cursor-pointer hover:ring-2 hover:ring-purple-400 transition-all">
+                                    <img
+                                        src={sponsor.src}
+                                        alt={sponsor.alt}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
             {/* Current Sponsors Section */}
             <div className="mb-20 md:mb-40">
                 <div className="container mx-auto px-4">
@@ -275,27 +300,6 @@ const Sponsors = () => {
                     <TitleHeader title="Platform Partner" sub="" titleClassName="text-4xl md:text-6xl" />
                     <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                         {featuredSponsors.map((sponsor, index) => (
-                            <div key={index} className="flex flex-col items-center gap-4">
-                                <a href={sponsor.href} target="_blank" rel="noopener noreferrer" className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4 cursor-pointer hover:ring-2 hover:ring-purple-400 transition-all">
-                                    <img
-                                        src={sponsor.src}
-                                        alt={sponsor.alt}
-                                        className="w-full h-full object-contain"
-                                    />
-                                </a>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-
-            {/* Hiring Partner Section */}
-            <div className="mb-20 md:mb-40">
-                <div className="container mx-auto px-4">
-                    <TitleHeader title="Hiring Partner" sub="" titleClassName="text-4xl md:text-6xl" />
-                    <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
-                        {hiringPartners.map((sponsor, index) => (
                             <div key={index} className="flex flex-col items-center gap-4">
                                 <a href={sponsor.href} target="_blank" rel="noopener noreferrer" className="w-[140px] h-[100px] sm:w-[250px] sm:h-[180px] md:w-[300px] md:h-[200px] bg-white rounded-[15px] flex items-center justify-center p-4 cursor-pointer hover:ring-2 hover:ring-purple-400 transition-all">
                                     <img
