@@ -185,7 +185,7 @@ const Contact = () => {
                                     <div className="flex flex-col gap-0.5">
                                         <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                                             <h4 className="font-general text-lg md:text-xl font-bold text-white leading-tight">
-                                                Srijan Singh
+                                                Hemateja
                                             </h4>
                                         </div>
 
