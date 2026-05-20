@@ -177,15 +177,15 @@ const Contact = () => {
                                 <div className="group relative flex items-center gap-4 w-full">
                                     <div className="relative size-16 md:size-20 rounded-full overflow-hidden border-2 border-white/20 shrink-0">
                                         <img
-                                            src="https://i.postimg.cc/J7DTtZ7c/IMG-8229.jpg"
-                                            alt="Aayush Shankar"
+                                            src="https://i.postimg.cc/cJwgqVjd/Whats-App-Image-2026-01-15-at-10-32-36-PM.jpg"
+                                            alt="Srijan Singh"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div className="flex flex-col gap-0.5">
                                         <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                                             <h4 className="font-general text-lg md:text-xl font-bold text-white leading-tight">
-                                                Aayush Shankar
+                                                Srijan Singh
                                             </h4>
                                         </div>
 
