@@ -177,7 +177,7 @@ const Contact = () => {
                                 <div className="group relative flex items-center gap-4 w-full">
                                     <div className="relative size-16 md:size-20 rounded-full overflow-hidden border-2 border-white/20 shrink-0">
                                         <img
-                                            src="https://i.postimg.cc/cJwgqVjd/Whats-App-Image-2026-01-15-at-10-32-36-PM.jpg"
+                                            src="https://i.postimg.cc/WbLc4z5Z/Whats-App-Image-2025-12-28-at-7-54-52-PM.jpg"
                                             alt="Srijan Singh"
                                             className="w-full h-full object-cover"
                                         />
